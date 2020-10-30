@@ -24,7 +24,7 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code DefaultGlobalSettingsProvider.DisplayName}: {@code Use
+     * Key {@code DefaultGlobalSettingsProvider.DisplayName}: {@code Use
      * default maven global settings}.
      * 
      * @return
@@ -35,7 +35,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code DefaultGlobalSettingsProvider.DisplayName}: {@code Use
+     * Key {@code DefaultGlobalSettingsProvider.DisplayName}: {@code Use
      * default maven global settings}.
      * 
      * @return
@@ -46,29 +46,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code FilePathGlobalSettingsProvider.DisplayName}: {@code Global
-     * settings file on filesystem}.
-     * 
-     * @return
-     *     {@code Global settings file on filesystem}
-     */
-    public static String FilePathGlobalSettingsProvider_DisplayName() {
-        return holder.format("FilePathGlobalSettingsProvider.DisplayName");
-    }
-
-    /**
-     * Key {@code FilePathGlobalSettingsProvider.DisplayName}: {@code Global
-     * settings file on filesystem}.
-     * 
-     * @return
-     *     {@code Global settings file on filesystem}
-     */
-    public static Localizable _FilePathGlobalSettingsProvider_DisplayName() {
-        return new Localizable(holder, "FilePathGlobalSettingsProvider.DisplayName");
-    }
-
-    /**
-     * Key {@code FilePathSettingsProvider.DisplayName}: {@code Settings file
+     * Key {@code FilePathSettingsProvider.DisplayName}: {@code Settings file
      * in filesystem}.
      * 
      * @return
@@ -79,7 +57,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code FilePathSettingsProvider.DisplayName}: {@code Settings file
+     * Key {@code FilePathSettingsProvider.DisplayName}: {@code Settings file
      * in filesystem}.
      * 
      * @return
@@ -90,7 +68,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code DefaultSettingsProvider.DisplayName}: {@code Use default
+     * Key {@code DefaultSettingsProvider.DisplayName}: {@code Use default
      * maven settings}.
      * 
      * @return
@@ -101,7 +79,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code DefaultSettingsProvider.DisplayName}: {@code Use default
+     * Key {@code DefaultSettingsProvider.DisplayName}: {@code Use default
      * maven settings}.
      * 
      * @return
@@ -109,6 +87,28 @@ public class Messages {
      */
     public static Localizable _DefaultSettingsProvider_DisplayName() {
         return new Localizable(holder, "DefaultSettingsProvider.DisplayName");
+    }
+
+    /**
+     * Key {@code FilePathGlobalSettingsProvider.DisplayName}: {@code Global
+     * settings file on filesystem}.
+     * 
+     * @return
+     *     {@code Global settings file on filesystem}
+     */
+    public static String FilePathGlobalSettingsProvider_DisplayName() {
+        return holder.format("FilePathGlobalSettingsProvider.DisplayName");
+    }
+
+    /**
+     * Key {@code FilePathGlobalSettingsProvider.DisplayName}: {@code Global
+     * settings file on filesystem}.
+     * 
+     * @return
+     *     {@code Global settings file on filesystem}
+     */
+    public static Localizable _FilePathGlobalSettingsProvider_DisplayName() {
+        return new Localizable(holder, "FilePathGlobalSettingsProvider.DisplayName");
     }
 
 }

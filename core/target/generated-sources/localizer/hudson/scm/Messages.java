@@ -24,26 +24,6 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code NullSCM.DisplayName}: {@code None}.
-     * 
-     * @return
-     *     {@code None}
-     */
-    public static String NullSCM_DisplayName() {
-        return holder.format("NullSCM.DisplayName");
-    }
-
-    /**
-     * Key {@code NullSCM.DisplayName}: {@code None}.
-     * 
-     * @return
-     *     {@code None}
-     */
-    public static Localizable _NullSCM_DisplayName() {
-        return new Localizable(holder, "NullSCM.DisplayName");
-    }
-
-    /**
      * Key {@code SCM.Permissions.Title}: {@code SCM}.
      * 
      * @return
@@ -64,12 +44,32 @@ public class Messages {
     }
 
     /**
-     * Key {@code SCM.TagPermission.Description}: {@code This permission
-     * allows users to create a new tag in the source code repository for a
+     * Key {@code NullSCM.DisplayName}: {@code None}.
+     * 
+     * @return
+     *     {@code None}
+     */
+    public static String NullSCM_DisplayName() {
+        return holder.format("NullSCM.DisplayName");
+    }
+
+    /**
+     * Key {@code NullSCM.DisplayName}: {@code None}.
+     * 
+     * @return
+     *     {@code None}
+     */
+    public static Localizable _NullSCM_DisplayName() {
+        return new Localizable(holder, "NullSCM.DisplayName");
+    }
+
+    /**
+     * Key {@code SCM.TagPermission.Description}: {@code This permission
+     * allows users to create a new tag in the source code repository for a
      * given build.}.
      * 
      * @return
-     *     {@code This permission allows users to create a new tag in the source
+     *     {@code This permission allows users to create a new tag in the source
      *     code repository for a given build.}
      */
     public static String SCM_TagPermission_Description() {
@@ -77,12 +77,12 @@ public class Messages {
     }
 
     /**
-     * Key {@code SCM.TagPermission.Description}: {@code This permission
-     * allows users to create a new tag in the source code repository for a
+     * Key {@code SCM.TagPermission.Description}: {@code This permission
+     * allows users to create a new tag in the source code repository for a
      * given build.}.
      * 
      * @return
-     *     {@code This permission allows users to create a new tag in the source
+     *     {@code This permission allows users to create a new tag in the source
      *     code repository for a given build.}
      */
     public static Localizable _SCM_TagPermission_Description() {

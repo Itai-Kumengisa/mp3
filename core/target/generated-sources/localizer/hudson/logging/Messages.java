@@ -24,26 +24,6 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code LogRecorderManager.init}: {@code Initialing log recorders}.
-     * 
-     * @return
-     *     {@code Initialing log recorders}
-     */
-    public static String LogRecorderManager_init() {
-        return holder.format("LogRecorderManager.init");
-    }
-
-    /**
-     * Key {@code LogRecorderManager.init}: {@code Initialing log recorders}.
-     * 
-     * @return
-     *     {@code Initialing log recorders}
-     */
-    public static Localizable _LogRecorderManager_init() {
-        return new Localizable(holder, "LogRecorderManager.init");
-    }
-
-    /**
      * Key {@code LogRecorderManager.DisplayName}: {@code log}.
      * 
      * @return
@@ -61,6 +41,26 @@ public class Messages {
      */
     public static Localizable _LogRecorderManager_DisplayName() {
         return new Localizable(holder, "LogRecorderManager.DisplayName");
+    }
+
+    /**
+     * Key {@code LogRecorderManager.init}: {@code Initialing log recorders}.
+     * 
+     * @return
+     *     {@code Initialing log recorders}
+     */
+    public static String LogRecorderManager_init() {
+        return holder.format("LogRecorderManager.init");
+    }
+
+    /**
+     * Key {@code LogRecorderManager.init}: {@code Initialing log recorders}.
+     * 
+     * @return
+     *     {@code Initialing log recorders}
+     */
+    public static Localizable _LogRecorderManager_init() {
+        return new Localizable(holder, "LogRecorderManager.init");
     }
 
 }

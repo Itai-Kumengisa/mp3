@@ -15,99 +15,43 @@ public interface LayoutTagLib
 
     /**
      * 
-     */
-    void expandButton(Map args, Closure body);
-
-    /**
+     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
      * 
-     */
-    void expandButton(Closure body);
-
-    /**
-     * 
-     */
-    void expandButton(Map args);
-
-    /**
-     * 
-     */
-    void expandButton();
-
-    /**
-     * 
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void progressiveRendering(Map args, Closure body);
-
-    /**
-     * 
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void progressiveRendering(Closure body);
-
-    /**
-     * 
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void progressiveRendering(Map args);
-
-    /**
-     * 
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void progressiveRendering();
-
-    /**
-     * 
-     *     Renders the body only if the current user has the specified permission
      *     
      *   
      * 
      */
-    void hasPermission(Map args, Closure body);
+    void ajax(Map args, Closure body);
 
     /**
      * 
-     *     Renders the body only if the current user has the specified permission
+     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
+     * 
      *     
      *   
      * 
      */
-    void hasPermission(Closure body);
+    void ajax(Closure body);
 
     /**
      * 
-     *     Renders the body only if the current user has the specified permission
+     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
+     * 
      *     
      *   
      * 
      */
-    void hasPermission(Map args);
+    void ajax(Map args);
 
     /**
      * 
-     *     Renders the body only if the current user has the specified permission
+     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
+     * 
      *     
      *   
      * 
      */
-    void hasPermission();
+    void ajax();
 
     /**
      * 
@@ -156,26 +100,6 @@ public interface LayoutTagLib
      * 
      */
     void breadcrumb();
-
-    /**
-     * 
-     */
-    void tab(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void tab(Closure body);
-
-    /**
-     * 
-     */
-    void tab(Map args);
-
-    /**
-     * 
-     */
-    void tab();
 
     /**
      * 
@@ -271,27 +195,427 @@ public interface LayoutTagLib
 
     /**
      * 
+     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
+     *         The body is displayed as the link text.
+     *         @since 1.512
+     *         
+     *         
+     *         
+     *         
+     *     
+     * 
      */
-    @TagFile("side-panel")
-    void side_panel(Map args, Closure body);
+    void confirmationLink(Map args, Closure body);
+
+    /**
+     * 
+     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
+     *         The body is displayed as the link text.
+     *         @since 1.512
+     *         
+     *         
+     *         
+     *         
+     *     
+     * 
+     */
+    void confirmationLink(Closure body);
+
+    /**
+     * 
+     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
+     *         The body is displayed as the link text.
+     *         @since 1.512
+     *         
+     *         
+     *         
+     *         
+     *     
+     * 
+     */
+    void confirmationLink(Map args);
+
+    /**
+     * 
+     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
+     *         The body is displayed as the link text.
+     *         @since 1.512
+     *         
+     *         
+     *         
+     *         
+     *     
+     * 
+     */
+    void confirmationLink();
+
+    /**
+     * 
+     *     Creates a small button that lets the user copies a text into clipboard
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void copyButton(Map args, Closure body);
+
+    /**
+     * 
+     *     Creates a small button that lets the user copies a text into clipboard
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void copyButton(Closure body);
+
+    /**
+     * 
+     *     Creates a small button that lets the user copies a text into clipboard
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void copyButton(Map args);
+
+    /**
+     * 
+     *     Creates a small button that lets the user copies a text into clipboard
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void copyButton();
 
     /**
      * 
      */
-    @TagFile("side-panel")
-    void side_panel(Closure body);
+    void expandButton(Map args, Closure body);
 
     /**
      * 
      */
-    @TagFile("side-panel")
-    void side_panel(Map args);
+    void expandButton(Closure body);
 
     /**
      * 
      */
-    @TagFile("side-panel")
-    void side_panel();
+    void expandButton(Map args);
+
+    /**
+     * 
+     */
+    void expandButton();
+
+    /**
+     * 
+     *     Renders the body only if the current user has the specified permission
+     *     
+     *   
+     * 
+     */
+    void hasPermission(Map args, Closure body);
+
+    /**
+     * 
+     *     Renders the body only if the current user has the specified permission
+     *     
+     *   
+     * 
+     */
+    void hasPermission(Closure body);
+
+    /**
+     * 
+     *     Renders the body only if the current user has the specified permission
+     *     
+     *   
+     * 
+     */
+    void hasPermission(Map args);
+
+    /**
+     * 
+     *     Renders the body only if the current user has the specified permission
+     *     
+     *   
+     * 
+     */
+    void hasPermission();
+
+    /**
+     * 
+     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
+     *     Multiple &lt;l:header> elements can be specified, and can even come after
+     *     &lt;l:main-panel>.
+     * 
+     *     This tag can be placed inside &lt;l:layout>.
+     *   
+     * 
+     */
+    void header(Map args, Closure body);
+
+    /**
+     * 
+     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
+     *     Multiple &lt;l:header> elements can be specified, and can even come after
+     *     &lt;l:main-panel>.
+     * 
+     *     This tag can be placed inside &lt;l:layout>.
+     *   
+     * 
+     */
+    void header(Closure body);
+
+    /**
+     * 
+     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
+     *     Multiple &lt;l:header> elements can be specified, and can even come after
+     *     &lt;l:main-panel>.
+     * 
+     *     This tag can be placed inside &lt;l:layout>.
+     *   
+     * 
+     */
+    void header(Map args);
+
+    /**
+     * 
+     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
+     *     Multiple &lt;l:header> elements can be specified, and can even come after
+     *     &lt;l:main-panel>.
+     * 
+     *     This tag can be placed inside &lt;l:layout>.
+     *   
+     * 
+     */
+    void header();
+
+    /**
+     * 
+     *     @since 1.576
+     *     
+     * 
+     *     
+     * 
+     *     
+     *     
+     *     
+     *     
+     * 
+     *     
+     *   
+     * 
+     */
+    void icon(Map args, Closure body);
+
+    /**
+     * 
+     *     @since 1.576
+     *     
+     * 
+     *     
+     * 
+     *     
+     *     
+     *     
+     *     
+     * 
+     *     
+     *   
+     * 
+     */
+    void icon(Closure body);
+
+    /**
+     * 
+     *     @since 1.576
+     *     
+     * 
+     *     
+     * 
+     *     
+     *     
+     *     
+     *     
+     * 
+     *     
+     *   
+     * 
+     */
+    void icon(Map args);
+
+    /**
+     * 
+     *     @since 1.576
+     *     
+     * 
+     *     
+     * 
+     *     
+     *     
+     *     
+     *     
+     * 
+     *     
+     *   
+     * 
+     */
+    void icon();
+
+    /**
+     * 
+     */
+    void isAdmin(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void isAdmin(Closure body);
+
+    /**
+     * 
+     */
+    void isAdmin(Map args);
+
+    /**
+     * 
+     */
+    void isAdmin();
+
+    /**
+     * Deprecated, do not use.
+     * 
+     */
+    void isAdminOrTest(Map args, Closure body);
+
+    /**
+     * Deprecated, do not use.
+     * 
+     */
+    void isAdminOrTest(Closure body);
+
+    /**
+     * Deprecated, do not use.
+     * 
+     */
+    void isAdminOrTest(Map args);
+
+    /**
+     * Deprecated, do not use.
+     * 
+     */
+    void isAdminOrTest();
+
+    /**
+     * 
+     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
+     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
+     *     to form Jenkins's basic HTML layout.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void layout(Map args, Closure body);
+
+    /**
+     * 
+     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
+     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
+     *     to form Jenkins's basic HTML layout.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void layout(Closure body);
+
+    /**
+     * 
+     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
+     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
+     *     to form Jenkins's basic HTML layout.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void layout(Map args);
+
+    /**
+     * 
+     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
+     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
+     *     to form Jenkins's basic HTML layout.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void layout();
+
+    /**
+     * 
+     *     Generates the body as the main content part of a Jenkins page.
+     *   
+     * 
+     */
+    @TagFile("main-panel")
+    void main_panel(Map args, Closure body);
+
+    /**
+     * 
+     *     Generates the body as the main content part of a Jenkins page.
+     *   
+     * 
+     */
+    @TagFile("main-panel")
+    void main_panel(Closure body);
+
+    /**
+     * 
+     *     Generates the body as the main content part of a Jenkins page.
+     *   
+     * 
+     */
+    @TagFile("main-panel")
+    void main_panel(Map args);
+
+    /**
+     * 
+     *     Generates the body as the main content part of a Jenkins page.
+     *   
+     * 
+     */
+    @TagFile("main-panel")
+    void main_panel();
 
     /**
      * 
@@ -367,131 +691,203 @@ public interface LayoutTagLib
 
     /**
      * 
-     */
-    void tasks(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void tasks(Closure body);
-
-    /**
-     * 
-     */
-    void tasks(Map args);
-
-    /**
-     * 
-     */
-    void tasks();
-
-    /**
-     * 
-     *     Load Yahoo UI module.
+     *         
+     *         
+     *         
      *     
-     *   
      * 
      */
-    void yui(Map args, Closure body);
+    void progressiveRendering(Map args, Closure body);
 
     /**
      * 
-     *     Load Yahoo UI module.
+     *         
+     *         
+     *         
      *     
-     *   
      * 
      */
-    void yui(Closure body);
+    void progressiveRendering(Closure body);
 
     /**
      * 
-     *     Load Yahoo UI module.
+     *         
+     *         
+     *         
      *     
-     *   
      * 
      */
-    void yui(Map args);
+    void progressiveRendering(Map args);
 
     /**
      * 
-     *     Load Yahoo UI module.
+     *         
+     *         
+     *         
      *     
-     *   
      * 
      */
-    void yui();
+    void progressiveRendering();
 
     /**
      * 
-     *     Creates a small button that lets the user copies a text into clipboard
-     * 
-     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void copyButton(Map args, Closure body);
+    void renderOnDemand(Map args, Closure body);
 
     /**
      * 
-     *     Creates a small button that lets the user copies a text into clipboard
-     * 
-     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void copyButton(Closure body);
+    void renderOnDemand(Closure body);
 
     /**
      * 
-     *     Creates a small button that lets the user copies a text into clipboard
-     * 
-     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void copyButton(Map args);
+    void renderOnDemand(Map args);
 
     /**
      * 
-     *     Creates a small button that lets the user copies a text into clipboard
-     * 
-     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void copyButton();
+    void renderOnDemand();
+
+    /**
+     * 
+     *     Creates a space for the right-hand side of the page.
+     *     This sticks to the right of the page even when the content overflows.
+     *   
+     * 
+     */
+    void rightspace(Map args, Closure body);
+
+    /**
+     * 
+     *     Creates a space for the right-hand side of the page.
+     *     This sticks to the right of the page even when the content overflows.
+     *   
+     * 
+     */
+    void rightspace(Closure body);
+
+    /**
+     * 
+     *     Creates a space for the right-hand side of the page.
+     *     This sticks to the right of the page even when the content overflows.
+     *   
+     * 
+     */
+    void rightspace(Map args);
+
+    /**
+     * 
+     *     Creates a space for the right-hand side of the page.
+     *     This sticks to the right of the page even when the content overflows.
+     *   
+     * 
+     */
+    void rightspace();
 
     /**
      * 
      */
-    void isAdmin(Map args, Closure body);
+    @TagFile("side-panel")
+    void side_panel(Map args, Closure body);
 
     /**
      * 
      */
-    void isAdmin(Closure body);
+    @TagFile("side-panel")
+    void side_panel(Closure body);
 
     /**
      * 
      */
-    void isAdmin(Map args);
+    @TagFile("side-panel")
+    void side_panel(Map args);
 
     /**
      * 
      */
-    void isAdmin();
+    @TagFile("side-panel")
+    void side_panel();
+
+    /**
+     * 
+     *         Creates a clickable "Stop" button.
+     *         
+     *         
+     *     
+     * 
+     */
+    void stopButton(Map args, Closure body);
+
+    /**
+     * 
+     *         Creates a clickable "Stop" button.
+     *         
+     *         
+     *     
+     * 
+     */
+    void stopButton(Closure body);
+
+    /**
+     * 
+     *         Creates a clickable "Stop" button.
+     *         
+     *         
+     *     
+     * 
+     */
+    void stopButton(Map args);
+
+    /**
+     * 
+     *         Creates a clickable "Stop" button.
+     *         
+     *         
+     *     
+     * 
+     */
+    void stopButton();
+
+    /**
+     * 
+     */
+    void tab(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void tab(Closure body);
+
+    /**
+     * 
+     */
+    void tab(Map args);
+
+    /**
+     * 
+     */
+    void tab();
 
     /**
      * 
@@ -603,454 +999,58 @@ public interface LayoutTagLib
 
     /**
      * 
-     *     @since 1.576
-     *     
+     */
+    void tasks(Map args, Closure body);
+
+    /**
      * 
-     *     
+     */
+    void tasks(Closure body);
+
+    /**
      * 
-     *     
-     *     
-     *     
-     *     
+     */
+    void tasks(Map args);
+
+    /**
      * 
+     */
+    void tasks();
+
+    /**
+     * 
+     *     Load Yahoo UI module.
      *     
      *   
      * 
      */
-    void icon(Map args, Closure body);
+    void yui(Map args, Closure body);
 
     /**
      * 
-     *     @since 1.576
-     *     
-     * 
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     * 
+     *     Load Yahoo UI module.
      *     
      *   
      * 
      */
-    void icon(Closure body);
+    void yui(Closure body);
 
     /**
      * 
-     *     @since 1.576
-     *     
-     * 
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     * 
+     *     Load Yahoo UI module.
      *     
      *   
      * 
      */
-    void icon(Map args);
+    void yui(Map args);
 
     /**
      * 
-     *     @since 1.576
-     *     
-     * 
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     * 
+     *     Load Yahoo UI module.
      *     
      *   
      * 
      */
-    void icon();
-
-    /**
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void renderOnDemand(Map args, Closure body);
-
-    /**
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void renderOnDemand(Closure body);
-
-    /**
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void renderOnDemand(Map args);
-
-    /**
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void renderOnDemand();
-
-    /**
-     * 
-     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
-     *         The body is displayed as the link text.
-     *         @since 1.512
-     *         
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void confirmationLink(Map args, Closure body);
-
-    /**
-     * 
-     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
-     *         The body is displayed as the link text.
-     *         @since 1.512
-     *         
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void confirmationLink(Closure body);
-
-    /**
-     * 
-     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
-     *         The body is displayed as the link text.
-     *         @since 1.512
-     *         
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void confirmationLink(Map args);
-
-    /**
-     * 
-     *         Produces a hyperlink which when clicked first asks for confirmation, then goes to that URL if confirmed.
-     *         The body is displayed as the link text.
-     *         @since 1.512
-     *         
-     *         
-     *         
-     *         
-     *     
-     * 
-     */
-    void confirmationLink();
-
-    /**
-     * 
-     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
-     * 
-     *     
-     *   
-     * 
-     */
-    void ajax(Map args, Closure body);
-
-    /**
-     * 
-     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
-     * 
-     *     
-     *   
-     * 
-     */
-    void ajax(Closure body);
-
-    /**
-     * 
-     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
-     * 
-     *     
-     *   
-     * 
-     */
-    void ajax(Map args);
-
-    /**
-     * 
-     *     Sets up the same 'global' variables that the l:layout tag does for content loaded by AJAX scripts.
-     * 
-     *     
-     *   
-     * 
-     */
-    void ajax();
-
-    /**
-     * 
-     *     Generates the body as the main content part of a Jenkins page.
-     *   
-     * 
-     */
-    @TagFile("main-panel")
-    void main_panel(Map args, Closure body);
-
-    /**
-     * 
-     *     Generates the body as the main content part of a Jenkins page.
-     *   
-     * 
-     */
-    @TagFile("main-panel")
-    void main_panel(Closure body);
-
-    /**
-     * 
-     *     Generates the body as the main content part of a Jenkins page.
-     *   
-     * 
-     */
-    @TagFile("main-panel")
-    void main_panel(Map args);
-
-    /**
-     * 
-     *     Generates the body as the main content part of a Jenkins page.
-     *   
-     * 
-     */
-    @TagFile("main-panel")
-    void main_panel();
-
-    /**
-     * 
-     *         Creates a clickable "Stop" button.
-     *         
-     *         
-     *     
-     * 
-     */
-    void stopButton(Map args, Closure body);
-
-    /**
-     * 
-     *         Creates a clickable "Stop" button.
-     *         
-     *         
-     *     
-     * 
-     */
-    void stopButton(Closure body);
-
-    /**
-     * 
-     *         Creates a clickable "Stop" button.
-     *         
-     *         
-     *     
-     * 
-     */
-    void stopButton(Map args);
-
-    /**
-     * 
-     *         Creates a clickable "Stop" button.
-     *         
-     *         
-     *     
-     * 
-     */
-    void stopButton();
-
-    /**
-     * 
-     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
-     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
-     *     to form Jenkins's basic HTML layout.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void layout(Map args, Closure body);
-
-    /**
-     * 
-     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
-     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
-     *     to form Jenkins's basic HTML layout.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void layout(Closure body);
-
-    /**
-     * 
-     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
-     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
-     *     to form Jenkins's basic HTML layout.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void layout(Map args);
-
-    /**
-     * 
-     *     Outer-most tag for a normal (non-AJAX) HTML rendering.
-     *     This is used with nested &lt;header>, &lt;side-panel>, and &lt;main-panel>
-     *     to form Jenkins's basic HTML layout.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void layout();
-
-    /**
-     * 
-     *     Creates a space for the right-hand side of the page.
-     *     This sticks to the right of the page even when the content overflows.
-     *   
-     * 
-     */
-    void rightspace(Map args, Closure body);
-
-    /**
-     * 
-     *     Creates a space for the right-hand side of the page.
-     *     This sticks to the right of the page even when the content overflows.
-     *   
-     * 
-     */
-    void rightspace(Closure body);
-
-    /**
-     * 
-     *     Creates a space for the right-hand side of the page.
-     *     This sticks to the right of the page even when the content overflows.
-     *   
-     * 
-     */
-    void rightspace(Map args);
-
-    /**
-     * 
-     *     Creates a space for the right-hand side of the page.
-     *     This sticks to the right of the page even when the content overflows.
-     *   
-     * 
-     */
-    void rightspace();
-
-    /**
-     * 
-     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
-     *     Multiple &lt;l:header> elements can be specified, and can even come after
-     *     &lt;l:main-panel>.
-     * 
-     *     This tag can be placed inside &lt;l:layout>.
-     *   
-     * 
-     */
-    void header(Map args, Closure body);
-
-    /**
-     * 
-     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
-     *     Multiple &lt;l:header> elements can be specified, and can even come after
-     *     &lt;l:main-panel>.
-     * 
-     *     This tag can be placed inside &lt;l:layout>.
-     *   
-     * 
-     */
-    void header(Closure body);
-
-    /**
-     * 
-     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
-     *     Multiple &lt;l:header> elements can be specified, and can even come after
-     *     &lt;l:main-panel>.
-     * 
-     *     This tag can be placed inside &lt;l:layout>.
-     *   
-     * 
-     */
-    void header(Map args);
-
-    /**
-     * 
-     *     Header portion of the HTML page, that gets rendered into the &lt;head> tag.
-     *     Multiple &lt;l:header> elements can be specified, and can even come after
-     *     &lt;l:main-panel>.
-     * 
-     *     This tag can be placed inside &lt;l:layout>.
-     *   
-     * 
-     */
-    void header();
-
-    /**
-     * Deprecated, do not use.
-     * 
-     */
-    void isAdminOrTest(Map args, Closure body);
-
-    /**
-     * Deprecated, do not use.
-     * 
-     */
-    void isAdminOrTest(Closure body);
-
-    /**
-     * Deprecated, do not use.
-     * 
-     */
-    void isAdminOrTest(Map args);
-
-    /**
-     * Deprecated, do not use.
-     * 
-     */
-    void isAdminOrTest();
+    void yui();
 
 }

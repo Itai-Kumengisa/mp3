@@ -24,7 +24,7 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code ReverseBuildTrigger.build_after_other_projects_are_built}:
+     * Key {@code ReverseBuildTrigger.build_after_other_projects_are_built}:
      * {@code Build after other projects are built}.
      * 
      * @return
@@ -35,7 +35,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code ReverseBuildTrigger.build_after_other_projects_are_built}:
+     * Key {@code ReverseBuildTrigger.build_after_other_projects_are_built}:
      * {@code Build after other projects are built}.
      * 
      * @return
@@ -46,8 +46,8 @@ public class Messages {
     }
 
     /**
-     * Key {@code
-     * ReverseBuildTrigger.running_as_cannot_even_see_for_trigger_f}: {@code
+     * Key {@code
+     * ReverseBuildTrigger.running_as_cannot_even_see_for_trigger_f}: {@code
      * Running as {0} cannot even see {1} for trigger from {2}}.
      * 
      * @param arg2
@@ -64,8 +64,8 @@ public class Messages {
     }
 
     /**
-     * Key {@code
-     * ReverseBuildTrigger.running_as_cannot_even_see_for_trigger_f}: {@code
+     * Key {@code
+     * ReverseBuildTrigger.running_as_cannot_even_see_for_trigger_f}: {@code
      * Running as {0} cannot even see {1} for trigger from {2}}.
      * 
      * @param arg2

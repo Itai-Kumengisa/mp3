@@ -24,7 +24,7 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code UserSearchProperty.DisplayName}: {@code Setting for
+     * Key {@code UserSearchProperty.DisplayName}: {@code Setting for
      * search}.
      * 
      * @return
@@ -35,7 +35,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code UserSearchProperty.DisplayName}: {@code Setting for
+     * Key {@code UserSearchProperty.DisplayName}: {@code Setting for
      * search}.
      * 
      * @return

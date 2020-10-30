@@ -15,12 +15,88 @@ public interface JenkinsTagLib
 
     /**
      * 
+     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
+     *     Item is passed in ${it}
+     *   
+     * 
+     */
+    void abstractItemLink(Map args, Closure body);
+
+    /**
+     * 
+     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
+     *     Item is passed in ${it}
+     *   
+     * 
+     */
+    void abstractItemLink(Closure body);
+
+    /**
+     * 
+     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
+     *     Item is passed in ${it}
+     *   
+     * 
+     */
+    void abstractItemLink(Map args);
+
+    /**
+     * 
+     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
+     *     Item is passed in ${it}
+     *   
+     * 
+     */
+    void abstractItemLink();
+
+    /**
+     * 
+     *     Shows a list of tasks.
+     * 
+     *     
+     *   
+     * 
+     */
+    void actions(Map args, Closure body);
+
+    /**
+     * 
+     *     Shows a list of tasks.
+     * 
+     *     
+     *   
+     * 
+     */
+    void actions(Closure body);
+
+    /**
+     * 
+     *     Shows a list of tasks.
+     * 
+     *     
+     *   
+     * 
+     */
+    void actions(Map args);
+
+    /**
+     * 
+     *     Shows a list of tasks.
+     * 
+     *     
+     *   
+     * 
+     */
+    void actions();
+
+    /**
+     * 
      *       DEPRECATED
      *   
      * 
      */
-    @TagFile("test-result")
-    void test_result(Map args, Closure body);
+    @TagFile("aggregated-failed-tests")
+    void aggregated_failed_tests(Map args, Closure body);
 
     /**
      * 
@@ -28,8 +104,8 @@ public interface JenkinsTagLib
      *   
      * 
      */
-    @TagFile("test-result")
-    void test_result(Closure body);
+    @TagFile("aggregated-failed-tests")
+    void aggregated_failed_tests(Closure body);
 
     /**
      * 
@@ -37,8 +113,8 @@ public interface JenkinsTagLib
      *   
      * 
      */
-    @TagFile("test-result")
-    void test_result(Map args);
+    @TagFile("aggregated-failed-tests")
+    void aggregated_failed_tests(Map args);
 
     /**
      * 
@@ -46,100 +122,124 @@ public interface JenkinsTagLib
      *   
      * 
      */
-    @TagFile("test-result")
-    void test_result();
+    @TagFile("aggregated-failed-tests")
+    void aggregated_failed_tests();
 
     /**
      * 
-     *     Creates a table of builds.
+     *     Generates a listing of the build artifacts.
+     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
+     * 
+     *     
+     *     
      *     
      *   
      * 
      */
-    void buildListTable(Map args, Closure body);
+    void artifactList(Map args, Closure body);
 
     /**
      * 
-     *     Creates a table of builds.
+     *     Generates a listing of the build artifacts.
+     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
+     * 
+     *     
+     *     
      *     
      *   
      * 
      */
-    void buildListTable(Closure body);
+    void artifactList(Closure body);
 
     /**
      * 
-     *     Creates a table of builds.
+     *     Generates a listing of the build artifacts.
+     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
+     * 
+     *     
+     *     
      *     
      *   
      * 
      */
-    void buildListTable(Map args);
+    void artifactList(Map args);
 
     /**
      * 
-     *     Creates a table of builds.
+     *     Generates a listing of the build artifacts.
+     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
+     * 
+     *     
+     *     
      *     
      *   
      * 
      */
-    void buildListTable();
+    void artifactList();
 
     /**
      * 
-     *         Displays a list of log records.
-     *         
+     *     Display the ball in a TD.
      *     
-     * 
-     */
-    void logRecords(Map args, Closure body);
-
-    /**
-     * 
-     *         Displays a list of log records.
-     *         
      *     
-     * 
-     */
-    void logRecords(Closure body);
-
-    /**
-     * 
-     *         Displays a list of log records.
-     *         
      *     
+     *   
      * 
      */
-    void logRecords(Map args);
+    void ballColorTd(Map args, Closure body);
 
     /**
      * 
-     *         Displays a list of log records.
-     *         
+     *     Display the ball in a TD.
      *     
+     *     
+     *     
+     *   
      * 
      */
-    void logRecords();
+    void ballColorTd(Closure body);
+
+    /**
+     * 
+     *     Display the ball in a TD.
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void ballColorTd(Map args);
+
+    /**
+     * 
+     *     Display the ball in a TD.
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void ballColorTd();
 
     /**
      * 
      */
-    void scriptConsole(Map args, Closure body);
+    void buildCaption(Map args, Closure body);
 
     /**
      * 
      */
-    void scriptConsole(Closure body);
+    void buildCaption(Closure body);
 
     /**
      * 
      */
-    void scriptConsole(Map args);
+    void buildCaption(Map args);
 
     /**
      * 
      */
-    void scriptConsole();
+    void buildCaption();
 
     /**
      * 
@@ -184,6 +284,322 @@ public interface JenkinsTagLib
     /**
      * 
      */
+    void buildHealth(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void buildHealth(Closure body);
+
+    /**
+     * 
+     */
+    void buildHealth(Map args);
+
+    /**
+     * 
+     */
+    void buildHealth();
+
+    /**
+     * 
+     */
+    void buildLink(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void buildLink(Closure body);
+
+    /**
+     * 
+     */
+    void buildLink(Map args);
+
+    /**
+     * 
+     */
+    void buildLink();
+
+    /**
+     * 
+     *     Creates a table of builds.
+     *     
+     *   
+     * 
+     */
+    void buildListTable(Map args, Closure body);
+
+    /**
+     * 
+     *     Creates a table of builds.
+     *     
+     *   
+     * 
+     */
+    void buildListTable(Closure body);
+
+    /**
+     * 
+     *     Creates a table of builds.
+     *     
+     *   
+     * 
+     */
+    void buildListTable(Map args);
+
+    /**
+     * 
+     *     Creates a table of builds.
+     *     
+     *   
+     * 
+     */
+    void buildListTable();
+
+    /**
+     * 
+     *     Progress bar for a build in progress.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void buildProgressBar(Map args, Closure body);
+
+    /**
+     * 
+     *     Progress bar for a build in progress.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void buildProgressBar(Closure body);
+
+    /**
+     * 
+     *     Progress bar for a build in progress.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void buildProgressBar(Map args);
+
+    /**
+     * 
+     *     Progress bar for a build in progress.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void buildProgressBar();
+
+    /**
+     * 
+     */
+    void buildRangeLink(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void buildRangeLink(Closure body);
+
+    /**
+     * 
+     */
+    void buildRangeLink(Map args);
+
+    /**
+     * 
+     */
+    void buildRangeLink();
+
+    /**
+     * 
+     */
+    void buildStatusSummary(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void buildStatusSummary(Closure body);
+
+    /**
+     * 
+     */
+    void buildStatusSummary(Map args);
+
+    /**
+     * 
+     */
+    void buildStatusSummary();
+
+    /**
+     * 
+     *     Renders ${it.description} and then allow it to be editable in place,
+     *     if the current user has the specified permission.
+     * 
+     *     
+     *   
+     * 
+     */
+    void editableDescription(Map args, Closure body);
+
+    /**
+     * 
+     *     Renders ${it.description} and then allow it to be editable in place,
+     *     if the current user has the specified permission.
+     * 
+     *     
+     *   
+     * 
+     */
+    void editableDescription(Closure body);
+
+    /**
+     * 
+     *     Renders ${it.description} and then allow it to be editable in place,
+     *     if the current user has the specified permission.
+     * 
+     *     
+     *   
+     * 
+     */
+    void editableDescription(Map args);
+
+    /**
+     * 
+     *     Renders ${it.description} and then allow it to be editable in place,
+     *     if the current user has the specified permission.
+     * 
+     *     
+     *   
+     * 
+     */
+    void editableDescription();
+
+    /**
+     * 
+     */
+    void editTypeIcon(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void editTypeIcon(Closure body);
+
+    /**
+     * 
+     */
+    void editTypeIcon(Map args);
+
+    /**
+     * 
+     */
+    void editTypeIcon();
+
+    /**
+     * 
+     *     Displays the status of executors.
+     *     
+     *   
+     * 
+     */
+    void executors(Map args, Closure body);
+
+    /**
+     * 
+     *     Displays the status of executors.
+     *     
+     *   
+     * 
+     */
+    void executors(Closure body);
+
+    /**
+     * 
+     *     Displays the status of executors.
+     *     
+     *   
+     * 
+     */
+    void executors(Map args);
+
+    /**
+     * 
+     *     Displays the status of executors.
+     *     
+     *   
+     * 
+     */
+    void executors();
+
+    /**
+     * 
+     *       DEPRECATED
+     *   
+     * 
+     */
+    @TagFile("failed-test")
+    void failed_test(Map args, Closure body);
+
+    /**
+     * 
+     *       DEPRECATED
+     *   
+     * 
+     */
+    @TagFile("failed-test")
+    void failed_test(Closure body);
+
+    /**
+     * 
+     *       DEPRECATED
+     *   
+     * 
+     */
+    @TagFile("failed-test")
+    void failed_test(Map args);
+
+    /**
+     * 
+     *       DEPRECATED
+     *   
+     * 
+     */
+    @TagFile("failed-test")
+    void failed_test();
+
+    /**
+     * 
+     */
+    void help(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void help(Closure body);
+
+    /**
+     * 
+     */
+    void help(Map args);
+
+    /**
+     * 
+     */
+    void help();
+
+    /**
+     * 
+     */
     void iconSize(Map args, Closure body);
 
     /**
@@ -200,6 +616,194 @@ public interface JenkinsTagLib
      * 
      */
     void iconSize();
+
+    /**
+     * 
+     *     Generates a link to a job.
+     *     
+     *   
+     * 
+     */
+    void jobLink(Map args, Closure body);
+
+    /**
+     * 
+     *     Generates a link to a job.
+     *     
+     *   
+     * 
+     */
+    void jobLink(Closure body);
+
+    /**
+     * 
+     *     Generates a link to a job.
+     *     
+     *   
+     * 
+     */
+    void jobLink(Map args);
+
+    /**
+     * 
+     *     Generates a link to a job.
+     *     
+     *   
+     * 
+     */
+    void jobLink();
+
+    /**
+     * 
+     *     List browser SCMs
+     *     
+     *   
+     * 
+     */
+    void listScmBrowsers(Map args, Closure body);
+
+    /**
+     * 
+     *     List browser SCMs
+     *     
+     *   
+     * 
+     */
+    void listScmBrowsers(Closure body);
+
+    /**
+     * 
+     *     List browser SCMs
+     *     
+     *   
+     * 
+     */
+    void listScmBrowsers(Map args);
+
+    /**
+     * 
+     *     List browser SCMs
+     *     
+     *   
+     * 
+     */
+    void listScmBrowsers();
+
+    /**
+     * 
+     *         Displays a list of log records.
+     *         
+     *     
+     * 
+     */
+    void logRecords(Map args, Closure body);
+
+    /**
+     * 
+     *         Displays a list of log records.
+     *         
+     *     
+     * 
+     */
+    void logRecords(Closure body);
+
+    /**
+     * 
+     *         Displays a list of log records.
+     *         
+     *     
+     * 
+     */
+    void logRecords(Map args);
+
+    /**
+     * 
+     *         Displays a list of log records.
+     *         
+     *     
+     * 
+     */
+    void logRecords();
+
+    /**
+     * 
+     *     Displays a link to a node.
+     *     
+     *     
+     *   
+     * 
+     */
+    void node(Map args, Closure body);
+
+    /**
+     * 
+     *     Displays a link to a node.
+     *     
+     *     
+     *   
+     * 
+     */
+    void node(Closure body);
+
+    /**
+     * 
+     *     Displays a link to a node.
+     *     
+     *     
+     *   
+     * 
+     */
+    void node(Map args);
+
+    /**
+     * 
+     *     Displays a link to a node.
+     *     
+     *     
+     *   
+     * 
+     */
+    void node();
+
+    /**
+     * 
+     */
+    void progressBar(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void progressBar(Closure body);
+
+    /**
+     * 
+     */
+    void progressBar(Map args);
+
+    /**
+     * 
+     */
+    void progressBar();
+
+    /**
+     * 
+     */
+    void progressiveText(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void progressiveText(Closure body);
+
+    /**
+     * 
+     */
+    void progressiveText(Map args);
+
+    /**
+     * 
+     */
+    void progressiveText();
 
     /**
      * 
@@ -271,311 +875,43 @@ public interface JenkinsTagLib
 
     /**
      * 
-     *     List browser SCMs
-     *     
-     *   
-     * 
      */
-    void listScmBrowsers(Map args, Closure body);
-
-    /**
-     * 
-     *     List browser SCMs
-     *     
-     *   
-     * 
-     */
-    void listScmBrowsers(Closure body);
-
-    /**
-     * 
-     *     List browser SCMs
-     *     
-     *   
-     * 
-     */
-    void listScmBrowsers(Map args);
-
-    /**
-     * 
-     *     List browser SCMs
-     *     
-     *   
-     * 
-     */
-    void listScmBrowsers();
-
-    /**
-     * 
-     *     Renders ${it.description} and then allow it to be editable in place,
-     *     if the current user has the specified permission.
-     * 
-     *     
-     *   
-     * 
-     */
-    void editableDescription(Map args, Closure body);
-
-    /**
-     * 
-     *     Renders ${it.description} and then allow it to be editable in place,
-     *     if the current user has the specified permission.
-     * 
-     *     
-     *   
-     * 
-     */
-    void editableDescription(Closure body);
-
-    /**
-     * 
-     *     Renders ${it.description} and then allow it to be editable in place,
-     *     if the current user has the specified permission.
-     * 
-     *     
-     *   
-     * 
-     */
-    void editableDescription(Map args);
-
-    /**
-     * 
-     *     Renders ${it.description} and then allow it to be editable in place,
-     *     if the current user has the specified permission.
-     * 
-     *     
-     *   
-     * 
-     */
-    void editableDescription();
-
-    /**
-     * 
-     *     Shows a list of tasks.
-     * 
-     *     
-     *   
-     * 
-     */
-    void actions(Map args, Closure body);
-
-    /**
-     * 
-     *     Shows a list of tasks.
-     * 
-     *     
-     *   
-     * 
-     */
-    void actions(Closure body);
-
-    /**
-     * 
-     *     Shows a list of tasks.
-     * 
-     *     
-     *   
-     * 
-     */
-    void actions(Map args);
-
-    /**
-     * 
-     *     Shows a list of tasks.
-     * 
-     *     
-     *   
-     * 
-     */
-    void actions();
+    void projectViewNested(Map args, Closure body);
 
     /**
      * 
      */
-    void buildCaption(Map args, Closure body);
+    void projectViewNested(Closure body);
 
     /**
      * 
      */
-    void buildCaption(Closure body);
+    void projectViewNested(Map args);
 
     /**
      * 
      */
-    void buildCaption(Map args);
+    void projectViewNested();
 
     /**
      * 
      */
-    void buildCaption();
+    void projectViewRow(Map args, Closure body);
 
     /**
      * 
      */
-    void buildStatusSummary(Map args, Closure body);
+    void projectViewRow(Closure body);
 
     /**
      * 
      */
-    void buildStatusSummary(Closure body);
+    void projectViewRow(Map args);
 
     /**
      * 
      */
-    void buildStatusSummary(Map args);
-
-    /**
-     * 
-     */
-    void buildStatusSummary();
-
-    /**
-     * 
-     *     Generates a link to a job.
-     *     
-     *   
-     * 
-     */
-    void jobLink(Map args, Closure body);
-
-    /**
-     * 
-     *     Generates a link to a job.
-     *     
-     *   
-     * 
-     */
-    void jobLink(Closure body);
-
-    /**
-     * 
-     *     Generates a link to a job.
-     *     
-     *   
-     * 
-     */
-    void jobLink(Map args);
-
-    /**
-     * 
-     *     Generates a link to a job.
-     *     
-     *   
-     * 
-     */
-    void jobLink();
-
-    /**
-     * 
-     */
-    void help(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void help(Closure body);
-
-    /**
-     * 
-     */
-    void help(Map args);
-
-    /**
-     * 
-     */
-    void help();
-
-    /**
-     * 
-     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
-     *     Item is passed in ${it}
-     *   
-     * 
-     */
-    void abstractItemLink(Map args, Closure body);
-
-    /**
-     * 
-     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
-     *     Item is passed in ${it}
-     *   
-     * 
-     */
-    void abstractItemLink(Closure body);
-
-    /**
-     * 
-     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
-     *     Item is passed in ${it}
-     *   
-     * 
-     */
-    void abstractItemLink(Map args);
-
-    /**
-     * 
-     *     Displays a link when given an AbstractItem. It is assumed that that Abstract
-     *     Item is passed in ${it}
-     *   
-     * 
-     */
-    void abstractItemLink();
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("aggregated-failed-tests")
-    void aggregated_failed_tests(Map args, Closure body);
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("aggregated-failed-tests")
-    void aggregated_failed_tests(Closure body);
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("aggregated-failed-tests")
-    void aggregated_failed_tests(Map args);
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("aggregated-failed-tests")
-    void aggregated_failed_tests();
-
-    /**
-     * 
-     */
-    void rssBar(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void rssBar(Closure body);
-
-    /**
-     * 
-     */
-    void rssBar(Map args);
-
-    /**
-     * 
-     */
-    void rssBar();
+    void projectViewRow();
 
     /**
      * 
@@ -616,86 +952,6 @@ public interface JenkinsTagLib
      * 
      */
     void propertyTable();
-
-    /**
-     * 
-     */
-    void editTypeIcon(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void editTypeIcon(Closure body);
-
-    /**
-     * 
-     */
-    void editTypeIcon(Map args);
-
-    /**
-     * 
-     */
-    void editTypeIcon();
-
-    /**
-     * 
-     *     Displays a link to a node.
-     *     
-     *     
-     *   
-     * 
-     */
-    void node(Map args, Closure body);
-
-    /**
-     * 
-     *     Displays a link to a node.
-     *     
-     *     
-     *   
-     * 
-     */
-    void node(Closure body);
-
-    /**
-     * 
-     *     Displays a link to a node.
-     *     
-     *     
-     *   
-     * 
-     */
-    void node(Map args);
-
-    /**
-     * 
-     *     Displays a link to a node.
-     *     
-     *     
-     *   
-     * 
-     */
-    void node();
-
-    /**
-     * 
-     */
-    void progressBar(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void progressBar(Closure body);
-
-    /**
-     * 
-     */
-    void progressBar(Map args);
-
-    /**
-     * 
-     */
-    void progressBar();
 
     /**
      * 
@@ -743,175 +999,67 @@ public interface JenkinsTagLib
 
     /**
      * 
-     *     Generates a listing of the build artifacts.
-     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
      */
-    void artifactList(Map args, Closure body);
-
-    /**
-     * 
-     *     Generates a listing of the build artifacts.
-     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void artifactList(Closure body);
-
-    /**
-     * 
-     *     Generates a listing of the build artifacts.
-     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void artifactList(Map args);
-
-    /**
-     * 
-     *     Generates a listing of the build artifacts.
-     *     Depending on the size of the artifact, this will either produce a list or a link to the directory view.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void artifactList();
+    @TagFile("rssBar-with-iconSize")
+    void rssBar_with_iconSize(Map args, Closure body);
 
     /**
      * 
      */
-    void buildLink(Map args, Closure body);
+    @TagFile("rssBar-with-iconSize")
+    void rssBar_with_iconSize(Closure body);
 
     /**
      * 
      */
-    void buildLink(Closure body);
+    @TagFile("rssBar-with-iconSize")
+    void rssBar_with_iconSize(Map args);
 
     /**
      * 
      */
-    void buildLink(Map args);
+    @TagFile("rssBar-with-iconSize")
+    void rssBar_with_iconSize();
 
     /**
      * 
      */
-    void buildLink();
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("failed-test")
-    void failed_test(Map args, Closure body);
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("failed-test")
-    void failed_test(Closure body);
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("failed-test")
-    void failed_test(Map args);
-
-    /**
-     * 
-     *       DEPRECATED
-     *   
-     * 
-     */
-    @TagFile("failed-test")
-    void failed_test();
+    void rssBar(Map args, Closure body);
 
     /**
      * 
      */
-    void projectViewRow(Map args, Closure body);
+    void rssBar(Closure body);
 
     /**
      * 
      */
-    void projectViewRow(Closure body);
+    void rssBar(Map args);
 
     /**
      * 
      */
-    void projectViewRow(Map args);
+    void rssBar();
 
     /**
      * 
      */
-    void projectViewRow();
+    void scriptConsole(Map args, Closure body);
 
     /**
      * 
-     *     Progress bar for a build in progress.
-     * 
-     *     
-     *     
-     *   
-     * 
      */
-    void buildProgressBar(Map args, Closure body);
+    void scriptConsole(Closure body);
 
     /**
      * 
-     *     Progress bar for a build in progress.
-     * 
-     *     
-     *     
-     *   
-     * 
      */
-    void buildProgressBar(Closure body);
+    void scriptConsole(Map args);
 
     /**
      * 
-     *     Progress bar for a build in progress.
-     * 
-     *     
-     *     
-     *   
-     * 
      */
-    void buildProgressBar(Map args);
-
-    /**
-     * 
-     *     Progress bar for a build in progress.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void buildProgressBar();
+    void scriptConsole();
 
     /**
      * 
@@ -987,59 +1135,39 @@ public interface JenkinsTagLib
 
     /**
      * 
-     */
-    void projectViewNested(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void projectViewNested(Closure body);
-
-    /**
-     * 
-     */
-    void projectViewNested(Map args);
-
-    /**
-     * 
-     */
-    void projectViewNested();
-
-    /**
-     * 
-     *     Displays the status of executors.
-     *     
+     *       DEPRECATED
      *   
      * 
      */
-    void executors(Map args, Closure body);
+    @TagFile("test-result")
+    void test_result(Map args, Closure body);
 
     /**
      * 
-     *     Displays the status of executors.
-     *     
+     *       DEPRECATED
      *   
      * 
      */
-    void executors(Closure body);
+    @TagFile("test-result")
+    void test_result(Closure body);
 
     /**
      * 
-     *     Displays the status of executors.
-     *     
+     *       DEPRECATED
      *   
      * 
      */
-    void executors(Map args);
+    @TagFile("test-result")
+    void test_result(Map args);
 
     /**
      * 
-     *     Displays the status of executors.
-     *     
+     *       DEPRECATED
      *   
      * 
      */
-    void executors();
+    @TagFile("test-result")
+    void test_result();
 
     /**
      * 
@@ -1060,133 +1188,5 @@ public interface JenkinsTagLib
      * 
      */
     void thirdPartyLicenses();
-
-    /**
-     * 
-     *     Display the ball in a TD.
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void ballColorTd(Map args, Closure body);
-
-    /**
-     * 
-     *     Display the ball in a TD.
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void ballColorTd(Closure body);
-
-    /**
-     * 
-     *     Display the ball in a TD.
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void ballColorTd(Map args);
-
-    /**
-     * 
-     *     Display the ball in a TD.
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void ballColorTd();
-
-    /**
-     * 
-     */
-    void progressiveText(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void progressiveText(Closure body);
-
-    /**
-     * 
-     */
-    void progressiveText(Map args);
-
-    /**
-     * 
-     */
-    void progressiveText();
-
-    /**
-     * 
-     */
-    @TagFile("rssBar-with-iconSize")
-    void rssBar_with_iconSize(Map args, Closure body);
-
-    /**
-     * 
-     */
-    @TagFile("rssBar-with-iconSize")
-    void rssBar_with_iconSize(Closure body);
-
-    /**
-     * 
-     */
-    @TagFile("rssBar-with-iconSize")
-    void rssBar_with_iconSize(Map args);
-
-    /**
-     * 
-     */
-    @TagFile("rssBar-with-iconSize")
-    void rssBar_with_iconSize();
-
-    /**
-     * 
-     */
-    void buildHealth(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void buildHealth(Closure body);
-
-    /**
-     * 
-     */
-    void buildHealth(Map args);
-
-    /**
-     * 
-     */
-    void buildHealth();
-
-    /**
-     * 
-     */
-    void buildRangeLink(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void buildRangeLink(Closure body);
-
-    /**
-     * 
-     */
-    void buildRangeLink(Map args);
-
-    /**
-     * 
-     */
-    void buildRangeLink();
 
 }

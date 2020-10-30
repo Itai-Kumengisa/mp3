@@ -15,271 +15,587 @@ public interface FormTagLib
 
     /**
      * 
-     *     Renders inline an optional single-value nested data-bound property of the current instance,
-     *     by using a &lt;f:optionalBlock>
+     *     Expandable section that shows "advanced..." button by default.
+     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
+     *     appears.
      * 
-     *     This is useful when your object composes another data-bound object, and when that's optional,
-     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
-     *     and the presence of the value.
+     *     
      *     
      *     
      *   
      * 
      */
-    void optionalProperty(Map args, Closure body);
+    void advanced(Map args, Closure body);
 
     /**
      * 
-     *     Renders inline an optional single-value nested data-bound property of the current instance,
-     *     by using a &lt;f:optionalBlock>
+     *     Expandable section that shows "advanced..." button by default.
+     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
+     *     appears.
      * 
-     *     This is useful when your object composes another data-bound object, and when that's optional,
-     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
-     *     and the presence of the value.
+     *     
      *     
      *     
      *   
      * 
      */
-    void optionalProperty(Closure body);
+    void advanced(Closure body);
 
     /**
      * 
-     *     Renders inline an optional single-value nested data-bound property of the current instance,
-     *     by using a &lt;f:optionalBlock>
+     *     Expandable section that shows "advanced..." button by default.
+     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
+     *     appears.
      * 
-     *     This is useful when your object composes another data-bound object, and when that's optional,
-     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
-     *     and the presence of the value.
+     *     
      *     
      *     
      *   
      * 
      */
-    void optionalProperty(Map args);
+    void advanced(Map args);
 
     /**
      * 
-     *     Renders inline an optional single-value nested data-bound property of the current instance,
-     *     by using a &lt;f:optionalBlock>
+     *     Expandable section that shows "advanced..." button by default.
+     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
+     *     appears.
      * 
-     *     This is useful when your object composes another data-bound object, and when that's optional,
-     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
-     *     and the presence of the value.
-     *     
-     *     
-     *   
-     * 
-     */
-    void optionalProperty();
-
-    /**
-     * on
-     *     Radio button with a label that hides additional controls.
-     *     When checked, those additional controls are displayed. This is useful
-     *     for presenting mutually exclusive options, where each option comes
-     *     with a sub-form that provides additional configuration.
-     * 
-     *     
-     *     
-     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void radioBlock(Map args, Closure body);
-
-    /**
-     * on
-     *     Radio button with a label that hides additional controls.
-     *     When checked, those additional controls are displayed. This is useful
-     *     for presenting mutually exclusive options, where each option comes
-     *     with a sub-form that provides additional configuration.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void radioBlock(Closure body);
-
-    /**
-     * on
-     *     Radio button with a label that hides additional controls.
-     *     When checked, those additional controls are displayed. This is useful
-     *     for presenting mutually exclusive options, where each option comes
-     *     with a sub-form that provides additional configuration.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void radioBlock(Map args);
-
-    /**
-     * on
-     *     Radio button with a label that hides additional controls.
-     *     When checked, those additional controls are displayed. This is useful
-     *     for presenting mutually exclusive options, where each option comes
-     *     with a sub-form that provides additional configuration.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void radioBlock();
+    void advanced();
 
     /**
      * 
-     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
-     *     arbitrary items from the given list of descriptors, and configure them independently.
+     *     "Apply" button that submits the form but without a page transition.
+     *     See hudson.util.FormApply for the server-side code.
      * 
-     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
-     * 
-     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
+     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
+     *     that allows interested parties to write back whatever states back into the INPUT
+     *     elements.
      *   
      * 
      */
-    @TagFile("hetero-list")
-    void hetero_list(Map args, Closure body);
+    void apply(Map args, Closure body);
 
     /**
      * 
-     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
-     *     arbitrary items from the given list of descriptors, and configure them independently.
+     *     "Apply" button that submits the form but without a page transition.
+     *     See hudson.util.FormApply for the server-side code.
      * 
-     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
-     * 
-     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
+     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
+     *     that allows interested parties to write back whatever states back into the INPUT
+     *     elements.
      *   
      * 
      */
-    @TagFile("hetero-list")
-    void hetero_list(Closure body);
+    void apply(Closure body);
 
     /**
      * 
-     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
-     *     arbitrary items from the given list of descriptors, and configure them independently.
+     *     "Apply" button that submits the form but without a page transition.
+     *     See hudson.util.FormApply for the server-side code.
      * 
-     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
-     * 
-     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
+     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
+     *     that allows interested parties to write back whatever states back into the INPUT
+     *     elements.
      *   
      * 
      */
-    @TagFile("hetero-list")
-    void hetero_list(Map args);
+    void apply(Map args);
 
     /**
      * 
-     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
-     *     arbitrary items from the given list of descriptors, and configure them independently.
+     *     "Apply" button that submits the form but without a page transition.
+     *     See hudson.util.FormApply for the server-side code.
      * 
-     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
-     * 
-     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
+     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
+     *     that allows interested parties to write back whatever states back into the INPUT
+     *     elements.
      *   
      * 
      */
-    @TagFile("hetero-list")
-    void hetero_list();
+    void apply();
 
     /**
      * 
-     *     Place holder to lazy-load help text via AJAX.
+     *     Full-width space in the form table that can be filled with arbitrary HTML.
      *   
      * 
      */
-    void helpArea(Map args, Closure body);
+    void block(Map args, Closure body);
 
     /**
      * 
-     *     Place holder to lazy-load help text via AJAX.
+     *     Full-width space in the form table that can be filled with arbitrary HTML.
      *   
      * 
      */
-    void helpArea(Closure body);
+    void block(Closure body);
 
     /**
      * 
-     *     Place holder to lazy-load help text via AJAX.
+     *     Full-width space in the form table that can be filled with arbitrary HTML.
      *   
      * 
      */
-    void helpArea(Map args);
+    void block(Map args);
 
     /**
      * 
-     *     Place holder to lazy-load help text via AJAX.
+     *     Full-width space in the form table that can be filled with arbitrary HTML.
      *   
      * 
      */
-    void helpArea();
+    void block();
+
+    /**
+     * 
+     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void booleanRadio(Map args, Closure body);
+
+    /**
+     * 
+     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void booleanRadio(Closure body);
+
+    /**
+     * 
+     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void booleanRadio(Map args);
+
+    /**
+     * 
+     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void booleanRadio();
+
+    /**
+     * 
+     *     Creates a button bar at the bottom of the page for things like "Submit".
+     *     The actual buttons should be specified as the body of this tag.
+     *     This area will always be visible in the bottom of the screen.
+     *   
+     * 
+     */
+    void bottomButtonBar(Map args, Closure body);
+
+    /**
+     * 
+     *     Creates a button bar at the bottom of the page for things like "Submit".
+     *     The actual buttons should be specified as the body of this tag.
+     *     This area will always be visible in the bottom of the screen.
+     *   
+     * 
+     */
+    void bottomButtonBar(Closure body);
+
+    /**
+     * 
+     *     Creates a button bar at the bottom of the page for things like "Submit".
+     *     The actual buttons should be specified as the body of this tag.
+     *     This area will always be visible in the bottom of the screen.
+     *   
+     * 
+     */
+    void bottomButtonBar(Map args);
+
+    /**
+     * 
+     *     Creates a button bar at the bottom of the page for things like "Submit".
+     *     The actual buttons should be specified as the body of this tag.
+     *     This area will always be visible in the bottom of the screen.
+     *   
+     * 
+     */
+    void bottomButtonBar();
+
+    /**
+     * 
+     *     Adds one more in-page breadcrumb that jumps to sections in the page.
+     *     Put this tag right before &lt;l:main-panel>
+     *   
+     * 
+     */
+    @TagFile("breadcrumb-config-outline")
+    void breadcrumb_config_outline(Map args, Closure body);
+
+    /**
+     * 
+     *     Adds one more in-page breadcrumb that jumps to sections in the page.
+     *     Put this tag right before &lt;l:main-panel>
+     *   
+     * 
+     */
+    @TagFile("breadcrumb-config-outline")
+    void breadcrumb_config_outline(Closure body);
+
+    /**
+     * 
+     *     Adds one more in-page breadcrumb that jumps to sections in the page.
+     *     Put this tag right before &lt;l:main-panel>
+     *   
+     * 
+     */
+    @TagFile("breadcrumb-config-outline")
+    void breadcrumb_config_outline(Map args);
+
+    /**
+     * 
+     *     Adds one more in-page breadcrumb that jumps to sections in the page.
+     *     Put this tag right before &lt;l:main-panel>
+     *   
+     * 
+     */
+    @TagFile("breadcrumb-config-outline")
+    void breadcrumb_config_outline();
+
+    /**
+     * 
+     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void checkbox(Map args, Closure body);
+
+    /**
+     * 
+     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void checkbox(Closure body);
+
+    /**
+     * 
+     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void checkbox(Map args);
+
+    /**
+     * 
+     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void checkbox();
+
+    /**
+     * 
+     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
+     * 
+     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
+     *     class, so we use the '$class' to represent that to clarify the intent.
+     *     
+     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
+     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
+     *     readers we do not put non-unique '$class'.
+     * 
+     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("class-entry")
+    void class_entry(Map args, Closure body);
+
+    /**
+     * 
+     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
+     * 
+     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
+     *     class, so we use the '$class' to represent that to clarify the intent.
+     *     
+     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
+     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
+     *     readers we do not put non-unique '$class'.
+     * 
+     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("class-entry")
+    void class_entry(Closure body);
+
+    /**
+     * 
+     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
+     * 
+     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
+     *     class, so we use the '$class' to represent that to clarify the intent.
+     *     
+     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
+     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
+     *     readers we do not put non-unique '$class'.
+     * 
+     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("class-entry")
+    void class_entry(Map args);
+
+    /**
+     * 
+     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
+     * 
+     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
+     *     class, so we use the '$class' to represent that to clarify the intent.
+     *     
+     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
+     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
+     *     readers we do not put non-unique '$class'.
+     * 
+     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("class-entry")
+    void class_entry();
+
+    /**
+     * 
+     *     Editable drop-down combo box that supports the data binding and AJAX updates.
+     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
+     *     representation of the items in your combo box, and your instance field should
+     *     hold the current value.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void combobox(Map args, Closure body);
+
+    /**
+     * 
+     *     Editable drop-down combo box that supports the data binding and AJAX updates.
+     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
+     *     representation of the items in your combo box, and your instance field should
+     *     hold the current value.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void combobox(Closure body);
+
+    /**
+     * 
+     *     Editable drop-down combo box that supports the data binding and AJAX updates.
+     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
+     *     representation of the items in your combo box, and your instance field should
+     *     hold the current value.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void combobox(Map args);
+
+    /**
+     * 
+     *     Editable drop-down combo box that supports the data binding and AJAX updates.
+     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
+     *     representation of the items in your combo box, and your instance field should
+     *     hold the current value.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void combobox();
+
+    /**
+     * 
+     *     Renders a row that shows description text below an input field.
+     *   
+     * 
+     */
+    void description(Map args, Closure body);
+
+    /**
+     * 
+     *     Renders a row that shows description text below an input field.
+     *   
+     * 
+     */
+    void description(Closure body);
+
+    /**
+     * 
+     *     Renders a row that shows description text below an input field.
+     *   
+     * 
+     */
+    void description(Map args);
+
+    /**
+     * 
+     *     Renders a row that shows description text below an input field.
+     *   
+     * 
+     */
+    void description();
+
+    /**
+     * 
+     *     Generate config pages from a list of Descriptors into a section.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void descriptorList(Map args, Closure body);
+
+    /**
+     * 
+     *     Generate config pages from a list of Descriptors into a section.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void descriptorList(Closure body);
+
+    /**
+     * 
+     *     Generate config pages from a list of Descriptors into a section.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void descriptorList(Map args);
+
+    /**
+     * 
+     *     Generate config pages from a list of Descriptors into a section.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void descriptorList();
 
     /**
      * 
@@ -339,47 +655,215 @@ public interface FormTagLib
 
     /**
      * 
-     *     Section header in the form table.
+     *     Renders a single &lt;select> control for choosing a Describable.
+     *     Depending on the currently selected value, its config.jelly will be
+     *     rendered below &lt;select, allowing the user to configure Describable.
      * 
+     *     
+     *     
      *     
      *     
      *   
      * 
      */
-    void section(Map args, Closure body);
+    void dropdownDescriptorSelector(Map args, Closure body);
 
     /**
      * 
-     *     Section header in the form table.
+     *     Renders a single &lt;select> control for choosing a Describable.
+     *     Depending on the currently selected value, its config.jelly will be
+     *     rendered below &lt;select, allowing the user to configure Describable.
      * 
+     *     
+     *     
      *     
      *     
      *   
      * 
      */
-    void section(Closure body);
+    void dropdownDescriptorSelector(Closure body);
 
     /**
      * 
-     *     Section header in the form table.
+     *     Renders a single &lt;select> control for choosing a Describable.
+     *     Depending on the currently selected value, its config.jelly will be
+     *     rendered below &lt;select, allowing the user to configure Describable.
      * 
+     *     
+     *     
      *     
      *     
      *   
      * 
      */
-    void section(Map args);
+    void dropdownDescriptorSelector(Map args);
 
     /**
      * 
-     *     Section header in the form table.
+     *     Renders a single &lt;select> control for choosing a Describable.
+     *     Depending on the currently selected value, its config.jelly will be
+     *     rendered below &lt;select, allowing the user to configure Describable.
      * 
+     *     
+     *     
      *     
      *     
      *   
      * 
      */
-    void section();
+    void dropdownDescriptorSelector();
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownList(Map args, Closure body);
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownList(Closure body);
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownList(Map args);
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownList();
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownListBlock(Map args, Closure body);
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownListBlock(Closure body);
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownListBlock(Map args);
+
+    /**
+     * 
+     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void dropdownListBlock();
+
+    /**
+     * 
+     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void editableComboBox(Map args, Closure body);
+
+    /**
+     * 
+     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void editableComboBox(Closure body);
+
+    /**
+     * 
+     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void editableComboBox(Map args);
+
+    /**
+     * 
+     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
+     * 
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void editableComboBox();
 
     /**
      * 
@@ -487,158 +971,6 @@ public interface FormTagLib
 
     /**
      * 
-     *     listbox for choosing the slave's usage.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("slave-mode")
-    void slave_mode(Map args, Closure body);
-
-    /**
-     * 
-     *     listbox for choosing the slave's usage.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("slave-mode")
-    void slave_mode(Closure body);
-
-    /**
-     * 
-     *     listbox for choosing the slave's usage.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("slave-mode")
-    void slave_mode(Map args);
-
-    /**
-     * 
-     *     listbox for choosing the slave's usage.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("slave-mode")
-    void slave_mode();
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownList(Map args, Closure body);
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownList(Closure body);
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownList(Map args);
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownList();
-
-    /**
-     * 
-     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
-     *     All the attributes are those of the &lt;textarea> tag.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void richtextarea(Map args, Closure body);
-
-    /**
-     * 
-     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
-     *     All the attributes are those of the &lt;textarea> tag.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void richtextarea(Closure body);
-
-    /**
-     * 
-     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
-     *     All the attributes are those of the &lt;textarea> tag.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void richtextarea(Map args);
-
-    /**
-     * 
-     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
-     *     All the attributes are those of the &lt;textarea> tag.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void richtextarea();
-
-    /**
-     * 
      *     Binds an enum field to a &lt;select> element.
      *     The body of this tag is evaluated for each enum value,
      *     which is passed as 'it'.
@@ -691,155 +1023,43 @@ public interface FormTagLib
 
     /**
      * 
-     *     Renders inline a single-value nested data-bound property of the current instance.
-     *     This is useful when your object composes another data-bound object as a nested object,
-     *     yet your UI would still like to render it
-     * 
-     *     
+     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
+     *     Should be used inside an &lt;f:entry field='...'> element.
      *     
      *   
      * 
      */
-    void property(Map args, Closure body);
+    void enumSet(Map args, Closure body);
 
     /**
      * 
-     *     Renders inline a single-value nested data-bound property of the current instance.
-     *     This is useful when your object composes another data-bound object as a nested object,
-     *     yet your UI would still like to render it
-     * 
-     *     
+     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
+     *     Should be used inside an &lt;f:entry field='...'> element.
      *     
      *   
      * 
      */
-    void property(Closure body);
+    void enumSet(Closure body);
 
     /**
      * 
-     *     Renders inline a single-value nested data-bound property of the current instance.
-     *     This is useful when your object composes another data-bound object as a nested object,
-     *     yet your UI would still like to render it
-     * 
-     *     
+     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
+     *     Should be used inside an &lt;f:entry field='...'> element.
      *     
      *   
      * 
      */
-    void property(Map args);
+    void enumSet(Map args);
 
     /**
      * 
-     *     Renders inline a single-value nested data-bound property of the current instance.
-     *     This is useful when your object composes another data-bound object as a nested object,
-     *     yet your UI would still like to render it
-     * 
-     *     
+     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
+     *     Should be used inside an &lt;f:entry field='...'> element.
      *     
      *   
      * 
      */
-    void property();
-
-    /**
-     * 
-     *     See
-     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
-     *     for the reference.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void validateButton(Map args, Closure body);
-
-    /**
-     * 
-     *     See
-     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
-     *     for the reference.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void validateButton(Closure body);
-
-    /**
-     * 
-     *     See
-     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
-     *     for the reference.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void validateButton(Map args);
-
-    /**
-     * 
-     *     See
-     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
-     *     for the reference.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void validateButton();
-
-    /**
-     * 
-     *     Delete button for the &lt;repeatable> tag.
-     * 
-     *     
-     *   
-     * 
-     */
-    void repeatableDeleteButton(Map args, Closure body);
-
-    /**
-     * 
-     *     Delete button for the &lt;repeatable> tag.
-     * 
-     *     
-     *   
-     * 
-     */
-    void repeatableDeleteButton(Closure body);
-
-    /**
-     * 
-     *     Delete button for the &lt;repeatable> tag.
-     * 
-     *     
-     *   
-     * 
-     */
-    void repeatableDeleteButton(Map args);
-
-    /**
-     * 
-     *     Delete button for the &lt;repeatable> tag.
-     * 
-     *     
-     *   
-     * 
-     */
-    void repeatableDeleteButton();
+    void enumSet();
 
     /**
      * 
@@ -935,6 +1155,342 @@ public interface FormTagLib
 
     /**
      * 
+     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void form(Map args, Closure body);
+
+    /**
+     * 
+     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void form(Closure body);
+
+    /**
+     * 
+     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void form(Map args);
+
+    /**
+     * 
+     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void form();
+
+    /**
+     * 
+     *     Place holder to lazy-load help text via AJAX.
+     *   
+     * 
+     */
+    void helpArea(Map args, Closure body);
+
+    /**
+     * 
+     *     Place holder to lazy-load help text via AJAX.
+     *   
+     * 
+     */
+    void helpArea(Closure body);
+
+    /**
+     * 
+     *     Place holder to lazy-load help text via AJAX.
+     *   
+     * 
+     */
+    void helpArea(Map args);
+
+    /**
+     * 
+     *     Place holder to lazy-load help text via AJAX.
+     *   
+     * 
+     */
+    void helpArea();
+
+    /**
+     * 
+     *     Outputs an help link for a &lt;f:form> item if help is available or 
+     *     a spacer if none is available.
+     * 
+     *     The help link is rendered as a table cell with an (?) icon.
+     *     If the user clicks it, the content of the HTML fragment at the given URL 
+     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
+     *     usually in a row beneath the item with help.
+     *     
+     *     The alternative spacer is just an empty table cell.
+     *     
+     *     This tag was introduced to ensure that the space reserved for help items
+     *     is consistent over the UI whether or not help exists.
+     * 
+     *     @since 1.576
+     *     
+     *     
+     *   
+     * 
+     */
+    void helpLink(Map args, Closure body);
+
+    /**
+     * 
+     *     Outputs an help link for a &lt;f:form> item if help is available or 
+     *     a spacer if none is available.
+     * 
+     *     The help link is rendered as a table cell with an (?) icon.
+     *     If the user clicks it, the content of the HTML fragment at the given URL 
+     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
+     *     usually in a row beneath the item with help.
+     *     
+     *     The alternative spacer is just an empty table cell.
+     *     
+     *     This tag was introduced to ensure that the space reserved for help items
+     *     is consistent over the UI whether or not help exists.
+     * 
+     *     @since 1.576
+     *     
+     *     
+     *   
+     * 
+     */
+    void helpLink(Closure body);
+
+    /**
+     * 
+     *     Outputs an help link for a &lt;f:form> item if help is available or 
+     *     a spacer if none is available.
+     * 
+     *     The help link is rendered as a table cell with an (?) icon.
+     *     If the user clicks it, the content of the HTML fragment at the given URL 
+     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
+     *     usually in a row beneath the item with help.
+     *     
+     *     The alternative spacer is just an empty table cell.
+     *     
+     *     This tag was introduced to ensure that the space reserved for help items
+     *     is consistent over the UI whether or not help exists.
+     * 
+     *     @since 1.576
+     *     
+     *     
+     *   
+     * 
+     */
+    void helpLink(Map args);
+
+    /**
+     * 
+     *     Outputs an help link for a &lt;f:form> item if help is available or 
+     *     a spacer if none is available.
+     * 
+     *     The help link is rendered as a table cell with an (?) icon.
+     *     If the user clicks it, the content of the HTML fragment at the given URL 
+     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
+     *     usually in a row beneath the item with help.
+     *     
+     *     The alternative spacer is just an empty table cell.
+     *     
+     *     This tag was introduced to ensure that the space reserved for help items
+     *     is consistent over the UI whether or not help exists.
+     * 
+     *     @since 1.576
+     *     
+     *     
+     *   
+     * 
+     */
+    void helpLink();
+
+    /**
+     * 
+     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
+     *     arbitrary items from the given list of descriptors, and configure them independently.
+     * 
+     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
+     * 
+     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-list")
+    void hetero_list(Map args, Closure body);
+
+    /**
+     * 
+     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
+     *     arbitrary items from the given list of descriptors, and configure them independently.
+     * 
+     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
+     * 
+     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-list")
+    void hetero_list(Closure body);
+
+    /**
+     * 
+     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
+     *     arbitrary items from the given list of descriptors, and configure them independently.
+     * 
+     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
+     * 
+     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-list")
+    void hetero_list(Map args);
+
+    /**
+     * 
+     *     Outer most tag for creating a heterogeneous list, where the user can choose arbitrary number of
+     *     arbitrary items from the given list of descriptors, and configure them independently.
+     * 
+     *     The submission can be data-bound into List&lt;T> where T is the common base type for the describable instances.
+     * 
+     *     For databinding use, please use &lt;f:repeatableHeteroProperty />
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-list")
+    void hetero_list();
+
+    /**
+     * 
+     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-radio")
+    void hetero_radio(Map args, Closure body);
+
+    /**
+     * 
+     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-radio")
+    void hetero_radio(Closure body);
+
+    /**
+     * 
+     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-radio")
+    void hetero_radio(Map args);
+
+    /**
+     * 
+     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    @TagFile("hetero-radio")
+    void hetero_radio();
+
+    /**
+     * 
      *     Invisible &lt;f:entry> type. Useful for adding hidden field values.
      *   
      * 
@@ -964,6 +1520,382 @@ public interface FormTagLib
      * 
      */
     void invisibleEntry();
+
+    /**
+     * 
+     *     Generates an anchor element with the ability to send POST requests and/or
+     *     asynchronous requests. It depends the combination of post and async attributes.
+     * 
+     *     @since 1.584
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void link(Map args, Closure body);
+
+    /**
+     * 
+     *     Generates an anchor element with the ability to send POST requests and/or
+     *     asynchronous requests. It depends the combination of post and async attributes.
+     * 
+     *     @since 1.584
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void link(Closure body);
+
+    /**
+     * 
+     *     Generates an anchor element with the ability to send POST requests and/or
+     *     asynchronous requests. It depends the combination of post and async attributes.
+     * 
+     *     @since 1.584
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void link(Map args);
+
+    /**
+     * 
+     *     Generates an anchor element with the ability to send POST requests and/or
+     *     asynchronous requests. It depends the combination of post and async attributes.
+     * 
+     *     @since 1.584
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void link();
+
+    /**
+     * 
+     */
+    void nested(Map args, Closure body);
+
+    /**
+     * 
+     */
+    void nested(Closure body);
+
+    /**
+     * 
+     */
+    void nested(Map args);
+
+    /**
+     * 
+     */
+    void nested();
+
+    /**
+     * 
+     *     Generates an input field  to be
+     *     used inside &lt;f:entry/>
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void number(Map args, Closure body);
+
+    /**
+     * 
+     *     Generates an input field  to be
+     *     used inside &lt;f:entry/>
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void number(Closure body);
+
+    /**
+     * 
+     *     Generates an input field  to be
+     *     used inside &lt;f:entry/>
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void number(Map args);
+
+    /**
+     * 
+     *     Generates an input field  to be
+     *     used inside &lt;f:entry/>
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void number();
+
+    /**
+     * 
+     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void option(Map args, Closure body);
+
+    /**
+     * 
+     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void option(Closure body);
+
+    /**
+     * 
+     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void option(Map args);
+
+    /**
+     * 
+     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void option();
+
+    /**
+     * 
+     *     Foldable block that can be expanded to show more controls by checking the checkbox.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalBlock(Map args, Closure body);
+
+    /**
+     * 
+     *     Foldable block that can be expanded to show more controls by checking the checkbox.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalBlock(Closure body);
+
+    /**
+     * 
+     *     Foldable block that can be expanded to show more controls by checking the checkbox.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalBlock(Map args);
+
+    /**
+     * 
+     *     Foldable block that can be expanded to show more controls by checking the checkbox.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalBlock();
+
+    /**
+     * 
+     *     Renders inline an optional single-value nested data-bound property of the current instance,
+     *     by using a &lt;f:optionalBlock>
+     * 
+     *     This is useful when your object composes another data-bound object, and when that's optional,
+     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
+     *     and the presence of the value.
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalProperty(Map args, Closure body);
+
+    /**
+     * 
+     *     Renders inline an optional single-value nested data-bound property of the current instance,
+     *     by using a &lt;f:optionalBlock>
+     * 
+     *     This is useful when your object composes another data-bound object, and when that's optional,
+     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
+     *     and the presence of the value.
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalProperty(Closure body);
+
+    /**
+     * 
+     *     Renders inline an optional single-value nested data-bound property of the current instance,
+     *     by using a &lt;f:optionalBlock>
+     * 
+     *     This is useful when your object composes another data-bound object, and when that's optional,
+     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
+     *     and the presence of the value.
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalProperty(Map args);
+
+    /**
+     * 
+     *     Renders inline an optional single-value nested data-bound property of the current instance,
+     *     by using a &lt;f:optionalBlock>
+     * 
+     *     This is useful when your object composes another data-bound object, and when that's optional,
+     *     where the absence of the value is signified as null (in which case the optionalBlock will be drawn unchecked),
+     *     and the presence of the value.
+     *     
+     *     
+     *   
+     * 
+     */
+    void optionalProperty();
+
+    /**
+     * 
+     *     Glorified &lt;input type="password">
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void password(Map args, Closure body);
+
+    /**
+     * 
+     *     Glorified &lt;input type="password">
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void password(Closure body);
+
+    /**
+     * 
+     *     Glorified &lt;input type="password">
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void password(Map args);
+
+    /**
+     * 
+     *     Glorified &lt;input type="password">
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void password();
 
     /**
      * 
@@ -1000,6 +1932,202 @@ public interface FormTagLib
      * 
      */
     void prepareDatabinding();
+
+    /**
+     * 
+     *     Renders inline a single-value nested data-bound property of the current instance.
+     *     This is useful when your object composes another data-bound object as a nested object,
+     *     yet your UI would still like to render it
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void property(Map args, Closure body);
+
+    /**
+     * 
+     *     Renders inline a single-value nested data-bound property of the current instance.
+     *     This is useful when your object composes another data-bound object as a nested object,
+     *     yet your UI would still like to render it
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void property(Closure body);
+
+    /**
+     * 
+     *     Renders inline a single-value nested data-bound property of the current instance.
+     *     This is useful when your object composes another data-bound object as a nested object,
+     *     yet your UI would still like to render it
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void property(Map args);
+
+    /**
+     * 
+     *     Renders inline a single-value nested data-bound property of the current instance.
+     *     This is useful when your object composes another data-bound object as a nested object,
+     *     yet your UI would still like to render it
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void property();
+
+    /**
+     * 
+     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
+     *     
+     *     Note that safari doesn't support onchange.
+     * 
+     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radio(Map args, Closure body);
+
+    /**
+     * 
+     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
+     *     
+     *     Note that safari doesn't support onchange.
+     * 
+     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radio(Closure body);
+
+    /**
+     * 
+     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
+     *     
+     *     Note that safari doesn't support onchange.
+     * 
+     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radio(Map args);
+
+    /**
+     * 
+     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
+     *     
+     *     Note that safari doesn't support onchange.
+     * 
+     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radio();
+
+    /**
+     * on
+     *     Radio button with a label that hides additional controls.
+     *     When checked, those additional controls are displayed. This is useful
+     *     for presenting mutually exclusive options, where each option comes
+     *     with a sub-form that provides additional configuration.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radioBlock(Map args, Closure body);
+
+    /**
+     * on
+     *     Radio button with a label that hides additional controls.
+     *     When checked, those additional controls are displayed. This is useful
+     *     for presenting mutually exclusive options, where each option comes
+     *     with a sub-form that provides additional configuration.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radioBlock(Closure body);
+
+    /**
+     * on
+     *     Radio button with a label that hides additional controls.
+     *     When checked, those additional controls are displayed. This is useful
+     *     for presenting mutually exclusive options, where each option comes
+     *     with a sub-form that provides additional configuration.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radioBlock(Map args);
+
+    /**
+     * on
+     *     Radio button with a label that hides additional controls.
+     *     When checked, those additional controls are displayed. This is useful
+     *     for presenting mutually exclusive options, where each option comes
+     *     with a sub-form that provides additional configuration.
+     * 
+     *     
+     *     
+     *     
+     *     
+     *     
+     *     
+     *   
+     * 
+     */
+    void radioBlock();
 
     /**
      * 
@@ -1072,190 +2200,6 @@ public interface FormTagLib
      * 
      */
     void readOnlyTextbox();
-
-    /**
-     *  
-     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
-     *     The nested property type must be Describable and it needs to have config.jelly.
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void repeatableHeteroProperty(Map args, Closure body);
-
-    /**
-     *  
-     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
-     *     The nested property type must be Describable and it needs to have config.jelly.
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void repeatableHeteroProperty(Closure body);
-
-    /**
-     *  
-     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
-     *     The nested property type must be Describable and it needs to have config.jelly.
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void repeatableHeteroProperty(Map args);
-
-    /**
-     *  
-     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
-     *     The nested property type must be Describable and it needs to have config.jelly.
-     *     
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void repeatableHeteroProperty();
-
-    /**
-     * 
-     *     Glorified &lt;input type="password">
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void password(Map args, Closure body);
-
-    /**
-     * 
-     *     Glorified &lt;input type="password">
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void password(Closure body);
-
-    /**
-     * 
-     *     Glorified &lt;input type="password">
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void password(Map args);
-
-    /**
-     * 
-     *     Glorified &lt;input type="password">
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void password();
-
-    /**
-     * 
-     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
-     *     it gets grouped in one JSON object.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void rowSet(Map args, Closure body);
-
-    /**
-     * 
-     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
-     *     it gets grouped in one JSON object.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void rowSet(Closure body);
-
-    /**
-     * 
-     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
-     *     it gets grouped in one JSON object.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void rowSet(Map args);
-
-    /**
-     * 
-     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
-     *     it gets grouped in one JSON object.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void rowSet();
 
     /**
      *  
@@ -1491,827 +2435,73 @@ public interface FormTagLib
 
     /**
      * 
-     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
+     *     Delete button for the &lt;repeatable> tag.
      * 
-     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
-     *     class, so we use the '$class' to represent that to clarify the intent.
-     *     
-     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
-     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
-     *     readers we do not put non-unique '$class'.
-     * 
-     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("class-entry")
-    void class_entry(Map args, Closure body);
-
-    /**
-     * 
-     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
-     * 
-     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
-     *     class, so we use the '$class' to represent that to clarify the intent.
-     *     
-     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
-     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
-     *     readers we do not put non-unique '$class'.
-     * 
-     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("class-entry")
-    void class_entry(Closure body);
-
-    /**
-     * 
-     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
-     * 
-     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
-     *     class, so we use the '$class' to represent that to clarify the intent.
-     *     
-     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
-     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
-     *     readers we do not put non-unique '$class'.
-     * 
-     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("class-entry")
-    void class_entry(Map args);
-
-    /**
-     * 
-     *     Invisible &lt;f:entry> type for embedding a descriptor's $class field.
-     * 
-     *     Most of the time a Descriptor has an unique class name that we can use to instantiate the right Describable
-     *     class, so we use the '$class' to represent that to clarify the intent.
-     *     
-     *     In some other times, such as templates, there are multiple Descriptors with the same Descriptor.clazz
-     *     but different IDs, and in that case we put 'kind' to indicate that. In this case, to avoid confusing
-     *     readers we do not put non-unique '$class'.
-     * 
-     *     See Descriptor.newInstancesFromHeteroList for how the reader side is handled.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("class-entry")
-    void class_entry();
-
-    /**
-     * 
-     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void booleanRadio(Map args, Closure body);
-
-    /**
-     * 
-     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void booleanRadio(Closure body);
-
-    /**
-     * 
-     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void booleanRadio(Map args);
-
-    /**
-     * 
-     *     Binds a boolean field to two radio buttons that say Yes/No OK/Cancel Top/Bottom.
-     * 
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void booleanRadio();
-
-    /**
-     * 
-     *     Generates an anchor element with the ability to send POST requests and/or
-     *     asynchronous requests. It depends the combination of post and async attributes.
-     * 
-     *     @since 1.584
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void link(Map args, Closure body);
-
-    /**
-     * 
-     *     Generates an anchor element with the ability to send POST requests and/or
-     *     asynchronous requests. It depends the combination of post and async attributes.
-     * 
-     *     @since 1.584
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void link(Closure body);
-
-    /**
-     * 
-     *     Generates an anchor element with the ability to send POST requests and/or
-     *     asynchronous requests. It depends the combination of post and async attributes.
-     * 
-     *     @since 1.584
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void link(Map args);
-
-    /**
-     * 
-     *     Generates an anchor element with the ability to send POST requests and/or
-     *     asynchronous requests. It depends the combination of post and async attributes.
-     * 
-     *     @since 1.584
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void link();
-
-    /**
-     * 
-     *     "Apply" button that submits the form but without a page transition.
-     *     See hudson.util.FormApply for the server-side code.
-     * 
-     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
-     *     that allows interested parties to write back whatever states back into the INPUT
-     *     elements.
-     *   
-     * 
-     */
-    void apply(Map args, Closure body);
-
-    /**
-     * 
-     *     "Apply" button that submits the form but without a page transition.
-     *     See hudson.util.FormApply for the server-side code.
-     * 
-     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
-     *     that allows interested parties to write back whatever states back into the INPUT
-     *     elements.
-     *   
-     * 
-     */
-    void apply(Closure body);
-
-    /**
-     * 
-     *     "Apply" button that submits the form but without a page transition.
-     *     See hudson.util.FormApply for the server-side code.
-     * 
-     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
-     *     that allows interested parties to write back whatever states back into the INPUT
-     *     elements.
-     *   
-     * 
-     */
-    void apply(Map args);
-
-    /**
-     * 
-     *     "Apply" button that submits the form but without a page transition.
-     *     See hudson.util.FormApply for the server-side code.
-     * 
-     *     When this button is pressed, the FORM element fires the "jenkins:apply" event
-     *     that allows interested parties to write back whatever states back into the INPUT
-     *     elements.
-     *   
-     * 
-     */
-    void apply();
-
-    /**
-     * 
-     *     Foldable block that can be expanded to show more controls by checking the checkbox.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void optionalBlock(Map args, Closure body);
-
-    /**
-     * 
-     *     Foldable block that can be expanded to show more controls by checking the checkbox.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void optionalBlock(Closure body);
-
-    /**
-     * 
-     *     Foldable block that can be expanded to show more controls by checking the checkbox.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void optionalBlock(Map args);
-
-    /**
-     * 
-     *     Foldable block that can be expanded to show more controls by checking the checkbox.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void optionalBlock();
-
-    /**
-     * 
-     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void checkbox(Map args, Closure body);
-
-    /**
-     * 
-     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void checkbox(Closure body);
-
-    /**
-     * 
-     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void checkbox(Map args);
-
-    /**
-     * 
-     *     &lt;input type="checkbox"> tag that takes true/false for @checked, which is more Jelly friendly.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void checkbox();
-
-    /**
-     * 
-     *     Editable drop-down combo box that supports the data binding and AJAX updates.
-     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
-     *     representation of the items in your combo box, and your instance field should
-     *     hold the current value.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void combobox(Map args, Closure body);
-
-    /**
-     * 
-     *     Editable drop-down combo box that supports the data binding and AJAX updates.
-     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
-     *     representation of the items in your combo box, and your instance field should
-     *     hold the current value.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void combobox(Closure body);
-
-    /**
-     * 
-     *     Editable drop-down combo box that supports the data binding and AJAX updates.
-     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
-     *     representation of the items in your combo box, and your instance field should
-     *     hold the current value.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void combobox(Map args);
-
-    /**
-     * 
-     *     Editable drop-down combo box that supports the data binding and AJAX updates.
-     *     Your descriptor should have the 'doFillXyzItems' method, which returns a ComboBoxModel
-     *     representation of the items in your combo box, and your instance field should
-     *     hold the current value.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void combobox();
-
-    /**
-     * 
-     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void form(Map args, Closure body);
-
-    /**
-     * 
-     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void form(Closure body);
-
-    /**
-     * 
-     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void form(Map args);
-
-    /**
-     * 
-     *     Outer-most tag of the entire form taglib, that generates &lt;form> element.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void form();
-
-    /**
-     * 
-     *     Renders a single &lt;select> control for choosing a Describable.
-     *     Depending on the currently selected value, its config.jelly will be
-     *     rendered below &lt;select, allowing the user to configure Describable.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownDescriptorSelector(Map args, Closure body);
-
-    /**
-     * 
-     *     Renders a single &lt;select> control for choosing a Describable.
-     *     Depending on the currently selected value, its config.jelly will be
-     *     rendered below &lt;select, allowing the user to configure Describable.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownDescriptorSelector(Closure body);
-
-    /**
-     * 
-     *     Renders a single &lt;select> control for choosing a Describable.
-     *     Depending on the currently selected value, its config.jelly will be
-     *     rendered below &lt;select, allowing the user to configure Describable.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownDescriptorSelector(Map args);
-
-    /**
-     * 
-     *     Renders a single &lt;select> control for choosing a Describable.
-     *     Depending on the currently selected value, its config.jelly will be
-     *     rendered below &lt;select, allowing the user to configure Describable.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownDescriptorSelector();
-
-    /**
-     * 
-     *     &lt;textarea> tag on steroids.
-     *     The textarea will be rendered to fit the content. It also gets the resize handle.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void textarea(Map args, Closure body);
-
-    /**
-     * 
-     *     &lt;textarea> tag on steroids.
-     *     The textarea will be rendered to fit the content. It also gets the resize handle.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void textarea(Closure body);
-
-    /**
-     * 
-     *     &lt;textarea> tag on steroids.
-     *     The textarea will be rendered to fit the content. It also gets the resize handle.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void textarea(Map args);
-
-    /**
-     * 
-     *     &lt;textarea> tag on steroids.
-     *     The textarea will be rendered to fit the content. It also gets the resize handle.
-     * 
-     *     
-     *     
-     *     
      *     
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void textarea();
-
-    /**
-     * 
-     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("hetero-radio")
-    void hetero_radio(Map args, Closure body);
-
-    /**
-     * 
-     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("hetero-radio")
-    void hetero_radio(Closure body);
-
-    /**
-     * 
-     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
-     * 
-     *     
-     *     
      *   
      * 
      */
-    @TagFile("hetero-radio")
-    void hetero_radio(Map args);
+    void repeatableDeleteButton(Map args, Closure body);
 
     /**
      * 
-     *     Sibling of hetero-list, which only allows the user to pick one type from the list of descriptors and configure it.
+     *     Delete button for the &lt;repeatable> tag.
      * 
      *     
-     *     
-     *   
-     * 
-     */
-    @TagFile("hetero-radio")
-    void hetero_radio();
-
-    /**
-     * 
-     *     Execute the body with a temporary currentDescriptorByNameUrl value
-     * 
-     *     
-     *   
-     * 
-     */
-    void withCustomDescriptorByName(Map args, Closure body);
-
-    /**
-     * 
-     *     Execute the body with a temporary currentDescriptorByNameUrl value
-     * 
-     *     
-     *   
-     * 
-     */
-    void withCustomDescriptorByName(Closure body);
-
-    /**
-     * 
-     *     Execute the body with a temporary currentDescriptorByNameUrl value
-     * 
-     *     
      *   
      * 
      */
-    void withCustomDescriptorByName(Map args);
+    void repeatableDeleteButton(Closure body);
 
     /**
      * 
-     *     Execute the body with a temporary currentDescriptorByNameUrl value
+     *     Delete button for the &lt;repeatable> tag.
      * 
      *     
      *   
      * 
      */
-    void withCustomDescriptorByName();
+    void repeatableDeleteButton(Map args);
 
     /**
      * 
-     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
-     *     
-     *     Note that safari doesn't support onchange.
+     *     Delete button for the &lt;repeatable> tag.
      * 
-     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
-     *     
-     *     
      *     
-     *     
-     *     
-     *     
      *   
      * 
      */
-    void radio(Map args, Closure body);
+    void repeatableDeleteButton();
 
     /**
-     * 
-     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
+     *  
+     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
+     *     The nested property type must be Describable and it needs to have config.jelly.
      *     
-     *     Note that safari doesn't support onchange.
      * 
-     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
      *     
      *     
      *     
      *     
      *     
      *     
-     *   
-     * 
-     */
-    void radio(Closure body);
-
-    /**
-     * 
-     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
-     *     
-     *     Note that safari doesn't support onchange.
-     * 
-     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
      *     
      *     
      *     
-     *     
-     *     
-     *     
      *   
      * 
      */
-    void radio(Map args);
+    void repeatableHeteroProperty(Map args, Closure body);
 
     /**
-     * 
-     *     &lt;input type="radio"> tag that takes true/false for @checked, which is more Jelly friendly.
-     *     
-     *     Note that safari doesn't support onchange.
-     * 
-     *     Beware that the name attribute should be uniquified among all radio blocks on the page, such as by prefixing it with "G0025." or whatever gensym.
-     *     
-     *     
+     *  
+     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
+     *     The nested property type must be Describable and it needs to have config.jelly.
      *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void radio();
-
-    /**
      * 
-     *     Generate config pages from a list of Descriptors into a section.
-     * 
-     *     
-     *     
-     *     
      *     
      *     
      *     
-     *   
-     * 
-     */
-    void descriptorList(Map args, Closure body);
-
-    /**
-     * 
-     *     Generate config pages from a list of Descriptors into a section.
-     * 
      *     
      *     
      *     
@@ -2321,165 +2511,47 @@ public interface FormTagLib
      *   
      * 
      */
-    void descriptorList(Closure body);
+    void repeatableHeteroProperty(Closure body);
 
     /**
-     * 
-     *     Generate config pages from a list of Descriptors into a section.
-     * 
-     *     
-     *     
-     *     
+     *  
+     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
+     *     The nested property type must be Describable and it needs to have config.jelly.
      *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void descriptorList(Map args);
-
-    /**
-     * 
-     *     Generate config pages from a list of Descriptors into a section.
      * 
      *     
      *     
      *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void descriptorList();
-
-    /**
-     * 
-     *     Submit button themed by YUI. This should be always
-     *     used instead of the plain &lt;input tag.
-     * 
-     *     
-     *     
-     *   
-     * 
-     */
-    void submit(Map args, Closure body);
-
-    /**
-     * 
-     *     Submit button themed by YUI. This should be always
-     *     used instead of the plain &lt;input tag.
-     * 
      *     
      *     
-     *   
-     * 
-     */
-    void submit(Closure body);
-
-    /**
-     * 
-     *     Submit button themed by YUI. This should be always
-     *     used instead of the plain &lt;input tag.
-     * 
      *     
      *     
-     *   
-     * 
-     */
-    void submit(Map args);
-
-    /**
-     * 
-     *     Submit button themed by YUI. This should be always
-     *     used instead of the plain &lt;input tag.
-     * 
      *     
      *     
-     *   
-     * 
-     */
-    void submit();
-
-    /**
-     * 
-     *     Full-width space in the form table that can be filled with arbitrary HTML.
-     *   
-     * 
-     */
-    void block(Map args, Closure body);
-
-    /**
-     * 
-     *     Full-width space in the form table that can be filled with arbitrary HTML.
-     *   
-     * 
-     */
-    void block(Closure body);
-
-    /**
-     * 
-     *     Full-width space in the form table that can be filled with arbitrary HTML.
-     *   
-     * 
-     */
-    void block(Map args);
-
-    /**
-     * 
-     *     Full-width space in the form table that can be filled with arbitrary HTML.
      *   
      * 
      */
-    void block();
+    void repeatableHeteroProperty(Map args);
 
     /**
-     * 
-     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
-     * 
-     *     
+     *  
+     *     Data-bound only version of &lt;f:hetero-list> that assumes the type pointed by the property is data-bound as well.
+     *     The nested property type must be Describable and it needs to have config.jelly.
      *     
-     *     
-     *   
-     * 
-     */
-    void editableComboBox(Map args, Closure body);
-
-    /**
      * 
-     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
-     * 
      *     
      *     
      *     
-     *   
-     * 
-     */
-    void editableComboBox(Closure body);
-
-    /**
-     * 
-     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
-     * 
      *     
      *     
      *     
-     *   
-     * 
-     */
-    void editableComboBox(Map args);
-
-    /**
-     * 
-     *     Editable drop-down combo box. Deprecated as of 1.356. Use f:combobox and databinding instead.
-     * 
      *     
      *     
      *     
      *   
      * 
      */
-    void editableComboBox();
+    void repeatableHeteroProperty();
 
     /**
      *  
@@ -2583,59 +2655,151 @@ public interface FormTagLib
 
     /**
      * 
-     *     Expandable section that shows "advanced..." button by default.
-     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
-     *     appears.
+     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
+     *     All the attributes are those of the &lt;textarea> tag.
      * 
+     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void advanced(Map args, Closure body);
+    void richtextarea(Map args, Closure body);
 
     /**
      * 
-     *     Expandable section that shows "advanced..." button by default.
-     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
-     *     appears.
+     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
+     *     All the attributes are those of the &lt;textarea> tag.
      * 
+     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void advanced(Closure body);
+    void richtextarea(Closure body);
 
     /**
      * 
-     *     Expandable section that shows "advanced..." button by default.
-     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
-     *     appears.
+     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
+     *     All the attributes are those of the &lt;textarea> tag.
      * 
+     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void advanced(Map args);
+    void richtextarea(Map args);
 
     /**
      * 
-     *     Expandable section that shows "advanced..." button by default.
-     *     Upon clicking it, a section unfolds, and the HTML rendered by the body of this tag
-     *     appears.
+     *     Rich HTML editor from http://developer.yahoo.com/yui/editor/
+     *     All the attributes are those of the &lt;textarea> tag.
      * 
+     *     
      *     
      *     
      *     
      *   
      * 
      */
-    void advanced();
+    void richtextarea();
+
+    /**
+     * 
+     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
+     *     it gets grouped in one JSON object.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void rowSet(Map args, Closure body);
+
+    /**
+     * 
+     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
+     *     it gets grouped in one JSON object.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void rowSet(Closure body);
+
+    /**
+     * 
+     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
+     *     it gets grouped in one JSON object.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void rowSet(Map args);
+
+    /**
+     * 
+     *     Adds @nameRef to all table rows inside this tag, so that when the form is submitted,
+     *     it gets grouped in one JSON object.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void rowSet();
+
+    /**
+     * 
+     *     Section header in the form table.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void section(Map args, Closure body);
+
+    /**
+     * 
+     *     Section header in the form table.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void section(Closure body);
+
+    /**
+     * 
+     *     Section header in the form table.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void section(Map args);
+
+    /**
+     * 
+     *     Section header in the form table.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void section();
 
     /**
      * 
@@ -2699,293 +2863,106 @@ public interface FormTagLib
 
     /**
      * 
-     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
-     *     Should be used inside an &lt;f:entry field='...'> element.
-     *     
-     *   
-     * 
-     */
-    void enumSet(Map args, Closure body);
-
-    /**
-     * 
-     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
-     *     Should be used inside an &lt;f:entry field='...'> element.
-     *     
-     *   
-     * 
-     */
-    void enumSet(Closure body);
-
-    /**
-     * 
-     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
-     *     Should be used inside an &lt;f:entry field='...'> element.
-     *     
-     *   
-     * 
-     */
-    void enumSet(Map args);
-
-    /**
-     * 
-     *     Binds a set of Enum to a list of checkboxes, each with the label taken from enum Enum.toString()
-     *     Should be used inside an &lt;f:entry field='...'> element.
-     *     
-     *   
-     * 
-     */
-    void enumSet();
-
-    /**
-     * 
-     */
-    void nested(Map args, Closure body);
-
-    /**
-     * 
-     */
-    void nested(Closure body);
-
-    /**
-     * 
-     */
-    void nested(Map args);
-
-    /**
-     * 
-     */
-    void nested();
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownListBlock(Map args, Closure body);
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownListBlock(Closure body);
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownListBlock(Map args);
-
-    /**
-     * 
-     *     Foldable block expanded when the corresponding item is selected in the drop-down list.
-     * 
-     *     
-     *     
-     *     
-     *     
-     *     
-     *   
-     * 
-     */
-    void dropdownListBlock();
-
-    /**
-     * 
-     *     Renders a row that shows description text below an input field.
-     *   
-     * 
-     */
-    void description(Map args, Closure body);
-
-    /**
-     * 
-     *     Renders a row that shows description text below an input field.
-     *   
-     * 
-     */
-    void description(Closure body);
-
-    /**
-     * 
-     *     Renders a row that shows description text below an input field.
-     *   
-     * 
-     */
-    void description(Map args);
-
-    /**
-     * 
-     *     Renders a row that shows description text below an input field.
-     *   
-     * 
-     */
-    void description();
-
-    /**
-     * 
-     *     Outputs an help link for a &lt;f:form> item if help is available or 
-     *     a spacer if none is available.
-     * 
-     *     The help link is rendered as a table cell with an (?) icon.
-     *     If the user clicks it, the content of the HTML fragment at the given URL 
-     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
-     *     usually in a row beneath the item with help.
-     *     
-     *     The alternative spacer is just an empty table cell.
-     *     
-     *     This tag was introduced to ensure that the space reserved for help items
-     *     is consistent over the UI whether or not help exists.
-     * 
-     *     @since 1.576
-     *     
-     *     
-     *   
-     * 
-     */
-    void helpLink(Map args, Closure body);
-
-    /**
-     * 
-     *     Outputs an help link for a &lt;f:form> item if help is available or 
-     *     a spacer if none is available.
-     * 
-     *     The help link is rendered as a table cell with an (?) icon.
-     *     If the user clicks it, the content of the HTML fragment at the given URL 
-     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
-     *     usually in a row beneath the item with help.
-     *     
-     *     The alternative spacer is just an empty table cell.
-     *     
-     *     This tag was introduced to ensure that the space reserved for help items
-     *     is consistent over the UI whether or not help exists.
-     * 
-     *     @since 1.576
-     *     
-     *     
-     *   
-     * 
-     */
-    void helpLink(Closure body);
-
-    /**
-     * 
-     *     Outputs an help link for a &lt;f:form> item if help is available or 
-     *     a spacer if none is available.
-     * 
-     *     The help link is rendered as a table cell with an (?) icon.
-     *     If the user clicks it, the content of the HTML fragment at the given URL 
-     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
-     *     usually in a row beneath the item with help.
-     *     
-     *     The alternative spacer is just an empty table cell.
-     *     
-     *     This tag was introduced to ensure that the space reserved for help items
-     *     is consistent over the UI whether or not help exists.
-     * 
-     *     @since 1.576
-     *     
-     *     
-     *   
-     * 
-     */
-    void helpLink(Map args);
-
-    /**
-     * 
-     *     Outputs an help link for a &lt;f:form> item if help is available or 
-     *     a spacer if none is available.
-     * 
-     *     The help link is rendered as a table cell with an (?) icon.
-     *     If the user clicks it, the content of the HTML fragment at the given URL 
-     *     is rendered in the area designated as &lt;f:helpArea> by the caller,
-     *     usually in a row beneath the item with help.
-     *     
-     *     The alternative spacer is just an empty table cell.
-     *     
-     *     This tag was introduced to ensure that the space reserved for help items
-     *     is consistent over the UI whether or not help exists.
-     * 
-     *     @since 1.576
-     *     
-     *     
-     *   
-     * 
-     */
-    void helpLink();
-
-    /**
-     * 
-     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     *     listbox for choosing the slave's usage.
      * 
      *     
      *     
      *   
      * 
      */
-    void option(Map args, Closure body);
+    @TagFile("slave-mode")
+    void slave_mode(Map args, Closure body);
 
     /**
      * 
-     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     *     listbox for choosing the slave's usage.
      * 
      *     
      *     
      *   
      * 
      */
-    void option(Closure body);
+    @TagFile("slave-mode")
+    void slave_mode(Closure body);
 
     /**
      * 
-     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     *     listbox for choosing the slave's usage.
      * 
      *     
      *     
      *   
      * 
      */
-    void option(Map args);
+    @TagFile("slave-mode")
+    void slave_mode(Map args);
 
     /**
      * 
-     *     &lt;option> tag for the &lt;select> element that takes true/false for selected.
+     *     listbox for choosing the slave's usage.
      * 
      *     
      *     
      *   
      * 
      */
-    void option();
+    @TagFile("slave-mode")
+    void slave_mode();
 
     /**
      * 
-     *     Generates an input field  to be
-     *     used inside &lt;f:entry/>
+     *     Submit button themed by YUI. This should be always
+     *     used instead of the plain &lt;input tag.
      * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void submit(Map args, Closure body);
+
+    /**
+     * 
+     *     Submit button themed by YUI. This should be always
+     *     used instead of the plain &lt;input tag.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void submit(Closure body);
+
+    /**
+     * 
+     *     Submit button themed by YUI. This should be always
+     *     used instead of the plain &lt;input tag.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void submit(Map args);
+
+    /**
+     * 
+     *     Submit button themed by YUI. This should be always
+     *     used instead of the plain &lt;input tag.
+     * 
+     *     
+     *     
+     *   
+     * 
+     */
+    void submit();
+
+    /**
+     * 
+     *     &lt;textarea> tag on steroids.
+     *     The textarea will be rendered to fit the content. It also gets the resize handle.
+     * 
+     *     
      *     
      *     
      *     
@@ -2997,13 +2974,14 @@ public interface FormTagLib
      *   
      * 
      */
-    void number(Map args, Closure body);
+    void textarea(Map args, Closure body);
 
     /**
      * 
-     *     Generates an input field  to be
-     *     used inside &lt;f:entry/>
+     *     &lt;textarea> tag on steroids.
+     *     The textarea will be rendered to fit the content. It also gets the resize handle.
      * 
+     *     
      *     
      *     
      *     
@@ -3015,13 +2993,14 @@ public interface FormTagLib
      *   
      * 
      */
-    void number(Closure body);
+    void textarea(Closure body);
 
     /**
      * 
-     *     Generates an input field  to be
-     *     used inside &lt;f:entry/>
+     *     &lt;textarea> tag on steroids.
+     *     The textarea will be rendered to fit the content. It also gets the resize handle.
      * 
+     *     
      *     
      *     
      *     
@@ -3033,13 +3012,14 @@ public interface FormTagLib
      *   
      * 
      */
-    void number(Map args);
+    void textarea(Map args);
 
     /**
      * 
-     *     Generates an input field  to be
-     *     used inside &lt;f:entry/>
+     *     &lt;textarea> tag on steroids.
+     *     The textarea will be rendered to fit the content. It also gets the resize handle.
      * 
+     *     
      *     
      *     
      *     
@@ -3051,7 +3031,7 @@ public interface FormTagLib
      *   
      * 
      */
-    void number();
+    void textarea();
 
     /**
      * 
@@ -3135,82 +3115,102 @@ public interface FormTagLib
 
     /**
      * 
-     *     Creates a button bar at the bottom of the page for things like "Submit".
-     *     The actual buttons should be specified as the body of this tag.
-     *     This area will always be visible in the bottom of the screen.
+     *     See
+     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
+     *     for the reference.
+     * 
+     *     
+     *     
+     *     
+     *     
      *   
      * 
      */
-    void bottomButtonBar(Map args, Closure body);
+    void validateButton(Map args, Closure body);
 
     /**
      * 
-     *     Creates a button bar at the bottom of the page for things like "Submit".
-     *     The actual buttons should be specified as the body of this tag.
-     *     This area will always be visible in the bottom of the screen.
+     *     See
+     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
+     *     for the reference.
+     * 
+     *     
+     *     
+     *     
+     *     
      *   
      * 
      */
-    void bottomButtonBar(Closure body);
+    void validateButton(Closure body);
 
     /**
      * 
-     *     Creates a button bar at the bottom of the page for things like "Submit".
-     *     The actual buttons should be specified as the body of this tag.
-     *     This area will always be visible in the bottom of the screen.
+     *     See
+     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
+     *     for the reference.
+     * 
+     *     
+     *     
+     *     
+     *     
      *   
      * 
      */
-    void bottomButtonBar(Map args);
+    void validateButton(Map args);
 
     /**
      * 
-     *     Creates a button bar at the bottom of the page for things like "Submit".
-     *     The actual buttons should be specified as the body of this tag.
-     *     This area will always be visible in the bottom of the screen.
+     *     See
+     *     http://wiki.jenkins-ci.org/display/JENKINS/Jelly+form+controls
+     *     for the reference.
+     * 
+     *     
+     *     
+     *     
+     *     
      *   
      * 
      */
-    void bottomButtonBar();
+    void validateButton();
 
     /**
      * 
-     *     Adds one more in-page breadcrumb that jumps to sections in the page.
-     *     Put this tag right before &lt;l:main-panel>
+     *     Execute the body with a temporary currentDescriptorByNameUrl value
+     * 
+     *     
      *   
      * 
      */
-    @TagFile("breadcrumb-config-outline")
-    void breadcrumb_config_outline(Map args, Closure body);
+    void withCustomDescriptorByName(Map args, Closure body);
 
     /**
      * 
-     *     Adds one more in-page breadcrumb that jumps to sections in the page.
-     *     Put this tag right before &lt;l:main-panel>
+     *     Execute the body with a temporary currentDescriptorByNameUrl value
+     * 
+     *     
      *   
      * 
      */
-    @TagFile("breadcrumb-config-outline")
-    void breadcrumb_config_outline(Closure body);
+    void withCustomDescriptorByName(Closure body);
 
     /**
      * 
-     *     Adds one more in-page breadcrumb that jumps to sections in the page.
-     *     Put this tag right before &lt;l:main-panel>
+     *     Execute the body with a temporary currentDescriptorByNameUrl value
+     * 
+     *     
      *   
      * 
      */
-    @TagFile("breadcrumb-config-outline")
-    void breadcrumb_config_outline(Map args);
+    void withCustomDescriptorByName(Map args);
 
     /**
      * 
-     *     Adds one more in-page breadcrumb that jumps to sections in the page.
-     *     Put this tag right before &lt;l:main-panel>
+     *     Execute the body with a temporary currentDescriptorByNameUrl value
+     * 
+     *     
      *   
      * 
      */
-    @TagFile("breadcrumb-config-outline")
-    void breadcrumb_config_outline();
+    void withCustomDescriptorByName();
 
 }

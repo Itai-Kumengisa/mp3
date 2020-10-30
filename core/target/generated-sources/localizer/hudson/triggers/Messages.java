@@ -24,29 +24,27 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code TimerTrigger.MissingWhitespace}: {@code You appear to be
-     * missing whitespace between * and *.}.
+     * Key {@code TimerTrigger.DisplayName}: {@code Build periodically}.
      * 
      * @return
-     *     {@code You appear to be missing whitespace between * and *.}
+     *     {@code Build periodically}
      */
-    public static String TimerTrigger_MissingWhitespace() {
-        return holder.format("TimerTrigger.MissingWhitespace");
+    public static String TimerTrigger_DisplayName() {
+        return holder.format("TimerTrigger.DisplayName");
     }
 
     /**
-     * Key {@code TimerTrigger.MissingWhitespace}: {@code You appear to be
-     * missing whitespace between * and *.}.
+     * Key {@code TimerTrigger.DisplayName}: {@code Build periodically}.
      * 
      * @return
-     *     {@code You appear to be missing whitespace between * and *.}
+     *     {@code Build periodically}
      */
-    public static Localizable _TimerTrigger_MissingWhitespace() {
-        return new Localizable(holder, "TimerTrigger.MissingWhitespace");
+    public static Localizable _TimerTrigger_DisplayName() {
+        return new Localizable(holder, "TimerTrigger.DisplayName");
     }
 
     /**
-     * Key {@code TimerTrigger.TimerTriggerCause.ShortDescription}: {@code
+     * Key {@code TimerTrigger.TimerTriggerCause.ShortDescription}: {@code
      * Started by timer}.
      * 
      * @return
@@ -57,7 +55,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code TimerTrigger.TimerTriggerCause.ShortDescription}: {@code
+     * Key {@code TimerTrigger.TimerTriggerCause.ShortDescription}: {@code
      * Started by timer}.
      * 
      * @return
@@ -65,6 +63,28 @@ public class Messages {
      */
     public static Localizable _TimerTrigger_TimerTriggerCause_ShortDescription() {
         return new Localizable(holder, "TimerTrigger.TimerTriggerCause.ShortDescription");
+    }
+
+    /**
+     * Key {@code TimerTrigger.no_schedules_so_will_never_run}: {@code No
+     * schedules so will never run}.
+     * 
+     * @return
+     *     {@code No schedules so will never run}
+     */
+    public static String TimerTrigger_no_schedules_so_will_never_run() {
+        return holder.format("TimerTrigger.no_schedules_so_will_never_run");
+    }
+
+    /**
+     * Key {@code TimerTrigger.no_schedules_so_will_never_run}: {@code No
+     * schedules so will never run}.
+     * 
+     * @return
+     *     {@code No schedules so will never run}
+     */
+    public static Localizable _TimerTrigger_no_schedules_so_will_never_run() {
+        return new Localizable(holder, "TimerTrigger.no_schedules_so_will_never_run");
     }
 
     /**
@@ -88,25 +108,53 @@ public class Messages {
     }
 
     /**
-     * Key {@code SCMTrigger.SCMTriggerCause.ShortDescription}: {@code
-     * Started by an SCM change}.
+     * Key {@code SCMTrigger.BuildAction.DisplayName}: {@code Polling Log}.
      * 
      * @return
-     *     {@code Started by an SCM change}
+     *     {@code Polling Log}
      */
-    public static String SCMTrigger_SCMTriggerCause_ShortDescription() {
-        return holder.format("SCMTrigger.SCMTriggerCause.ShortDescription");
+    public static String SCMTrigger_BuildAction_DisplayName() {
+        return holder.format("SCMTrigger.BuildAction.DisplayName");
     }
 
     /**
-     * Key {@code SCMTrigger.SCMTriggerCause.ShortDescription}: {@code
-     * Started by an SCM change}.
+     * Key {@code SCMTrigger.BuildAction.DisplayName}: {@code Polling Log}.
      * 
      * @return
-     *     {@code Started by an SCM change}
+     *     {@code Polling Log}
      */
-    public static Localizable _SCMTrigger_SCMTriggerCause_ShortDescription() {
-        return new Localizable(holder, "SCMTrigger.SCMTriggerCause.ShortDescription");
+    public static Localizable _SCMTrigger_BuildAction_DisplayName() {
+        return new Localizable(holder, "SCMTrigger.BuildAction.DisplayName");
+    }
+
+    /**
+     * Key {@code TimerTrigger.would_last_have_run_at_would_next_run_at}:
+     * {@code Would last have run at {0}; would next run at {1}.}.
+     * 
+     * @param arg1
+     *      2nd format parameter, {@code {1}}, as {@link String#valueOf(Object)}.
+     * @param arg0
+     *      1st format parameter, {@code {0}}, as {@link String#valueOf(Object)}.
+     * @return
+     *     {@code Would last have run at {0}; would next run at {1}.}
+     */
+    public static String TimerTrigger_would_last_have_run_at_would_next_run_at(Object arg0, Object arg1) {
+        return holder.format("TimerTrigger.would_last_have_run_at_would_next_run_at", arg0, arg1);
+    }
+
+    /**
+     * Key {@code TimerTrigger.would_last_have_run_at_would_next_run_at}:
+     * {@code Would last have run at {0}; would next run at {1}.}.
+     * 
+     * @param arg1
+     *      2nd format parameter, {@code {1}}, as {@link String#valueOf(Object)}.
+     * @param arg0
+     *      1st format parameter, {@code {0}}, as {@link String#valueOf(Object)}.
+     * @return
+     *     {@code Would last have run at {0}; would next run at {1}.}
+     */
+    public static Localizable _TimerTrigger_would_last_have_run_at_would_next_run_at(Object arg0, Object arg1) {
+        return new Localizable(holder, "TimerTrigger.would_last_have_run_at_would_next_run_at", arg0, arg1);
     }
 
     /**
@@ -134,45 +182,47 @@ public class Messages {
     }
 
     /**
-     * Key {@code TimerTrigger.no_schedules_so_will_never_run}: {@code No
-     * schedules so will never run}.
+     * Key {@code TimerTrigger.MissingWhitespace}: {@code You appear to be
+     * missing whitespace between * and *.}.
      * 
      * @return
-     *     {@code No schedules so will never run}
+     *     {@code You appear to be missing whitespace between * and *.}
      */
-    public static String TimerTrigger_no_schedules_so_will_never_run() {
-        return holder.format("TimerTrigger.no_schedules_so_will_never_run");
+    public static String TimerTrigger_MissingWhitespace() {
+        return holder.format("TimerTrigger.MissingWhitespace");
     }
 
     /**
-     * Key {@code TimerTrigger.no_schedules_so_will_never_run}: {@code No
-     * schedules so will never run}.
+     * Key {@code TimerTrigger.MissingWhitespace}: {@code You appear to be
+     * missing whitespace between * and *.}.
      * 
      * @return
-     *     {@code No schedules so will never run}
+     *     {@code You appear to be missing whitespace between * and *.}
      */
-    public static Localizable _TimerTrigger_no_schedules_so_will_never_run() {
-        return new Localizable(holder, "TimerTrigger.no_schedules_so_will_never_run");
+    public static Localizable _TimerTrigger_MissingWhitespace() {
+        return new Localizable(holder, "TimerTrigger.MissingWhitespace");
     }
 
     /**
-     * Key {@code TimerTrigger.DisplayName}: {@code Build periodically}.
+     * Key {@code SCMTrigger.SCMTriggerCause.ShortDescription}: {@code
+     * Started by an SCM change}.
      * 
      * @return
-     *     {@code Build periodically}
+     *     {@code Started by an SCM change}
      */
-    public static String TimerTrigger_DisplayName() {
-        return holder.format("TimerTrigger.DisplayName");
+    public static String SCMTrigger_SCMTriggerCause_ShortDescription() {
+        return holder.format("SCMTrigger.SCMTriggerCause.ShortDescription");
     }
 
     /**
-     * Key {@code TimerTrigger.DisplayName}: {@code Build periodically}.
+     * Key {@code SCMTrigger.SCMTriggerCause.ShortDescription}: {@code
+     * Started by an SCM change}.
      * 
      * @return
-     *     {@code Build periodically}
+     *     {@code Started by an SCM change}
      */
-    public static Localizable _TimerTrigger_DisplayName() {
-        return new Localizable(holder, "TimerTrigger.DisplayName");
+    public static Localizable _SCMTrigger_SCMTriggerCause_ShortDescription() {
+        return new Localizable(holder, "SCMTrigger.SCMTriggerCause.ShortDescription");
     }
 
     /**
@@ -193,56 +243,6 @@ public class Messages {
      */
     public static Localizable _Trigger_init() {
         return new Localizable(holder, "Trigger.init");
-    }
-
-    /**
-     * Key {@code TimerTrigger.would_last_have_run_at_would_next_run_at}:
-     * {@code Would last have run at {0}; would next run at {1}.}.
-     * 
-     * @param arg1
-     *      2nd format parameter, {@code {1}}, as {@link String#valueOf(Object)}.
-     * @param arg0
-     *      1st format parameter, {@code {0}}, as {@link String#valueOf(Object)}.
-     * @return
-     *     {@code Would last have run at {0}; would next run at {1}.}
-     */
-    public static String TimerTrigger_would_last_have_run_at_would_next_run_at(Object arg0, Object arg1) {
-        return holder.format("TimerTrigger.would_last_have_run_at_would_next_run_at", arg0, arg1);
-    }
-
-    /**
-     * Key {@code TimerTrigger.would_last_have_run_at_would_next_run_at}:
-     * {@code Would last have run at {0}; would next run at {1}.}.
-     * 
-     * @param arg1
-     *      2nd format parameter, {@code {1}}, as {@link String#valueOf(Object)}.
-     * @param arg0
-     *      1st format parameter, {@code {0}}, as {@link String#valueOf(Object)}.
-     * @return
-     *     {@code Would last have run at {0}; would next run at {1}.}
-     */
-    public static Localizable _TimerTrigger_would_last_have_run_at_would_next_run_at(Object arg0, Object arg1) {
-        return new Localizable(holder, "TimerTrigger.would_last_have_run_at_would_next_run_at", arg0, arg1);
-    }
-
-    /**
-     * Key {@code SCMTrigger.BuildAction.DisplayName}: {@code Polling Log}.
-     * 
-     * @return
-     *     {@code Polling Log}
-     */
-    public static String SCMTrigger_BuildAction_DisplayName() {
-        return holder.format("SCMTrigger.BuildAction.DisplayName");
-    }
-
-    /**
-     * Key {@code SCMTrigger.BuildAction.DisplayName}: {@code Polling Log}.
-     * 
-     * @return
-     *     {@code Polling Log}
-     */
-    public static Localizable _SCMTrigger_BuildAction_DisplayName() {
-        return new Localizable(holder, "SCMTrigger.BuildAction.DisplayName");
     }
 
 }

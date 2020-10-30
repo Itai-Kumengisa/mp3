@@ -24,29 +24,7 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code GroovyInitScript.init}: {@code Executing user-defined init
-     * script}.
-     * 
-     * @return
-     *     {@code Executing user-defined init script}
-     */
-    public static String GroovyInitScript_init() {
-        return holder.format("GroovyInitScript.init");
-    }
-
-    /**
-     * Key {@code GroovyInitScript.init}: {@code Executing user-defined init
-     * script}.
-     * 
-     * @return
-     *     {@code Executing user-defined init script}
-     */
-    public static Localizable _GroovyInitScript_init() {
-        return new Localizable(holder, "GroovyInitScript.init");
-    }
-
-    /**
-     * Key {@code InitialUserContent.init}: {@code Preparing initial user
+     * Key {@code InitialUserContent.init}: {@code Preparing initial user
      * content}.
      * 
      * @return
@@ -57,7 +35,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code InitialUserContent.init}: {@code Preparing initial user
+     * Key {@code InitialUserContent.init}: {@code Preparing initial user
      * content}.
      * 
      * @return
@@ -65,6 +43,28 @@ public class Messages {
      */
     public static Localizable _InitialUserContent_init() {
         return new Localizable(holder, "InitialUserContent.init");
+    }
+
+    /**
+     * Key {@code GroovyInitScript.init}: {@code Executing user-defined init
+     * script}.
+     * 
+     * @return
+     *     {@code Executing user-defined init script}
+     */
+    public static String GroovyInitScript_init() {
+        return holder.format("GroovyInitScript.init");
+    }
+
+    /**
+     * Key {@code GroovyInitScript.init}: {@code Executing user-defined init
+     * script}.
+     * 
+     * @return
+     *     {@code Executing user-defined init script}
+     */
+    public static Localizable _GroovyInitScript_init() {
+        return new Localizable(holder, "GroovyInitScript.init");
     }
 
 }

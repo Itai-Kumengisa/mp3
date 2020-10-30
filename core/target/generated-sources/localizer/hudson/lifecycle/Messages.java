@@ -24,55 +24,7 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code WindowsInstallerLink.DisplayName}: {@code Install as
-     * Windows Service}.
-     * 
-     * @return
-     *     {@code Install as Windows Service}
-     */
-    public static String WindowsInstallerLink_DisplayName() {
-        return holder.format("WindowsInstallerLink.DisplayName");
-    }
-
-    /**
-     * Key {@code WindowsInstallerLink.DisplayName}: {@code Install as
-     * Windows Service}.
-     * 
-     * @return
-     *     {@code Install as Windows Service}
-     */
-    public static Localizable _WindowsInstallerLink_DisplayName() {
-        return new Localizable(holder, "WindowsInstallerLink.DisplayName");
-    }
-
-    /**
-     * Key {@code WindowsSlaveInstaller.InstallationSuccessful}: {@code
-     * Installation was successful. Would you like to start the service
-     * now?}.
-     * 
-     * @return
-     *     {@code Installation was successful. Would you like to start the
-     *     service now?}
-     */
-    public static String WindowsSlaveInstaller_InstallationSuccessful() {
-        return holder.format("WindowsSlaveInstaller.InstallationSuccessful");
-    }
-
-    /**
-     * Key {@code WindowsSlaveInstaller.InstallationSuccessful}: {@code
-     * Installation was successful. Would you like to start the service
-     * now?}.
-     * 
-     * @return
-     *     {@code Installation was successful. Would you like to start the
-     *     service now?}
-     */
-    public static Localizable _WindowsSlaveInstaller_InstallationSuccessful() {
-        return new Localizable(holder, "WindowsSlaveInstaller.InstallationSuccessful");
-    }
-
-    /**
-     * Key {@code WindowsSlaveInstaller.DotNetRequired}: {@code .NET
+     * Key {@code WindowsSlaveInstaller.DotNetRequired}: {@code .NET
      * Framework 2.0 or later is required for this feature}.
      * 
      * @return
@@ -83,7 +35,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code WindowsSlaveInstaller.DotNetRequired}: {@code .NET
+     * Key {@code WindowsSlaveInstaller.DotNetRequired}: {@code .NET
      * Framework 2.0 or later is required for this feature}.
      * 
      * @return
@@ -94,12 +46,60 @@ public class Messages {
     }
 
     /**
-     * Key {@code WindowsInstallerLink.Description}: {@code Installs Jenkins
-     * as a Windows service to this system, so that Jenkins starts
+     * Key {@code WindowsSlaveInstaller.InstallationSuccessful}: {@code
+     * Installation was successful. Would you like to start the service
+     * now?}.
+     * 
+     * @return
+     *     {@code Installation was successful. Would you like to start the
+     *     service now?}
+     */
+    public static String WindowsSlaveInstaller_InstallationSuccessful() {
+        return holder.format("WindowsSlaveInstaller.InstallationSuccessful");
+    }
+
+    /**
+     * Key {@code WindowsSlaveInstaller.InstallationSuccessful}: {@code
+     * Installation was successful. Would you like to start the service
+     * now?}.
+     * 
+     * @return
+     *     {@code Installation was successful. Would you like to start the
+     *     service now?}
+     */
+    public static Localizable _WindowsSlaveInstaller_InstallationSuccessful() {
+        return new Localizable(holder, "WindowsSlaveInstaller.InstallationSuccessful");
+    }
+
+    /**
+     * Key {@code WindowsInstallerLink.DisplayName}: {@code Install as
+     * Windows Service}.
+     * 
+     * @return
+     *     {@code Install as Windows Service}
+     */
+    public static String WindowsInstallerLink_DisplayName() {
+        return holder.format("WindowsInstallerLink.DisplayName");
+    }
+
+    /**
+     * Key {@code WindowsInstallerLink.DisplayName}: {@code Install as
+     * Windows Service}.
+     * 
+     * @return
+     *     {@code Install as Windows Service}
+     */
+    public static Localizable _WindowsInstallerLink_DisplayName() {
+        return new Localizable(holder, "WindowsInstallerLink.DisplayName");
+    }
+
+    /**
+     * Key {@code WindowsInstallerLink.Description}: {@code Installs Jenkins
+     * as a Windows service to this system, so that Jenkins starts
      * automatically when the machine boots.}.
      * 
      * @return
-     *     {@code Installs Jenkins as a Windows service to this system, so that
+     *     {@code Installs Jenkins as a Windows service to this system, so that
      *     Jenkins starts automatically when the machine boots.}
      */
     public static String WindowsInstallerLink_Description() {
@@ -107,12 +107,12 @@ public class Messages {
     }
 
     /**
-     * Key {@code WindowsInstallerLink.Description}: {@code Installs Jenkins
-     * as a Windows service to this system, so that Jenkins starts
+     * Key {@code WindowsInstallerLink.Description}: {@code Installs Jenkins
+     * as a Windows service to this system, so that Jenkins starts
      * automatically when the machine boots.}.
      * 
      * @return
-     *     {@code Installs Jenkins as a Windows service to this system, so that
+     *     {@code Installs Jenkins as a Windows service to this system, so that
      *     Jenkins starts automatically when the machine boots.}
      */
     public static Localizable _WindowsInstallerLink_Description() {
@@ -120,7 +120,33 @@ public class Messages {
     }
 
     /**
-     * Key {@code WindowsSlaveInstaller.RootFsDoesntExist}: {@code Slave root
+     * Key {@code WindowsSlaveInstaller.ConfirmInstallation}: {@code This
+     * will install a slave agent as a Windows service, so that a Jenkins
+     * slave starts automatically when the machine boots.}.
+     * 
+     * @return
+     *     {@code This will install a slave agent as a Windows service, so that a
+     *     Jenkins slave starts automatically when the machine boots.}
+     */
+    public static String WindowsSlaveInstaller_ConfirmInstallation() {
+        return holder.format("WindowsSlaveInstaller.ConfirmInstallation");
+    }
+
+    /**
+     * Key {@code WindowsSlaveInstaller.ConfirmInstallation}: {@code This
+     * will install a slave agent as a Windows service, so that a Jenkins
+     * slave starts automatically when the machine boots.}.
+     * 
+     * @return
+     *     {@code This will install a slave agent as a Windows service, so that a
+     *     Jenkins slave starts automatically when the machine boots.}
+     */
+    public static Localizable _WindowsSlaveInstaller_ConfirmInstallation() {
+        return new Localizable(holder, "WindowsSlaveInstaller.ConfirmInstallation");
+    }
+
+    /**
+     * Key {@code WindowsSlaveInstaller.RootFsDoesntExist}: {@code Slave root
      * directory ‘{0}’ doesn’t exist}.
      * 
      * @param arg0
@@ -133,7 +159,7 @@ public class Messages {
     }
 
     /**
-     * Key {@code WindowsSlaveInstaller.RootFsDoesntExist}: {@code Slave root
+     * Key {@code WindowsSlaveInstaller.RootFsDoesntExist}: {@code Slave root
      * directory ‘{0}’ doesn’t exist}.
      * 
      * @param arg0
@@ -143,32 +169,6 @@ public class Messages {
      */
     public static Localizable _WindowsSlaveInstaller_RootFsDoesntExist(Object arg0) {
         return new Localizable(holder, "WindowsSlaveInstaller.RootFsDoesntExist", arg0);
-    }
-
-    /**
-     * Key {@code WindowsSlaveInstaller.ConfirmInstallation}: {@code This
-     * will install a slave agent as a Windows service, so that a Jenkins
-     * slave starts automatically when the machine boots.}.
-     * 
-     * @return
-     *     {@code This will install a slave agent as a Windows service, so that a
-     *     Jenkins slave starts automatically when the machine boots.}
-     */
-    public static String WindowsSlaveInstaller_ConfirmInstallation() {
-        return holder.format("WindowsSlaveInstaller.ConfirmInstallation");
-    }
-
-    /**
-     * Key {@code WindowsSlaveInstaller.ConfirmInstallation}: {@code This
-     * will install a slave agent as a Windows service, so that a Jenkins
-     * slave starts automatically when the machine boots.}.
-     * 
-     * @return
-     *     {@code This will install a slave agent as a Windows service, so that a
-     *     Jenkins slave starts automatically when the machine boots.}
-     */
-    public static Localizable _WindowsSlaveInstaller_ConfirmInstallation() {
-        return new Localizable(holder, "WindowsSlaveInstaller.ConfirmInstallation");
     }
 
 }

@@ -24,23 +24,25 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code ApiTokenProperty.DisplayName}: {@code API Token}.
+     * Key {@code ApiTokenProperty.ChangeToken.Success}: {@code
+     * <div>Updated</div>}.
      * 
      * @return
-     *     {@code API Token}
+     *     {@code <div>Updated</div>}
      */
-    public static String ApiTokenProperty_DisplayName() {
-        return holder.format("ApiTokenProperty.DisplayName");
+    public static String ApiTokenProperty_ChangeToken_Success() {
+        return holder.format("ApiTokenProperty.ChangeToken.Success");
     }
 
     /**
-     * Key {@code ApiTokenProperty.DisplayName}: {@code API Token}.
+     * Key {@code ApiTokenProperty.ChangeToken.Success}: {@code
+     * <div>Updated</div>}.
      * 
      * @return
-     *     {@code API Token}
+     *     {@code <div>Updated</div>}
      */
-    public static Localizable _ApiTokenProperty_DisplayName() {
-        return new Localizable(holder, "ApiTokenProperty.DisplayName");
+    public static Localizable _ApiTokenProperty_ChangeToken_Success() {
+        return new Localizable(holder, "ApiTokenProperty.ChangeToken.Success");
     }
 
     /**
@@ -64,25 +66,23 @@ public class Messages {
     }
 
     /**
-     * Key {@code ApiTokenProperty.ChangeToken.Success}: {@code
-     * <div>Updated</div>}.
+     * Key {@code ApiTokenProperty.DisplayName}: {@code API Token}.
      * 
      * @return
-     *     {@code <div>Updated</div>}
+     *     {@code API Token}
      */
-    public static String ApiTokenProperty_ChangeToken_Success() {
-        return holder.format("ApiTokenProperty.ChangeToken.Success");
+    public static String ApiTokenProperty_DisplayName() {
+        return holder.format("ApiTokenProperty.DisplayName");
     }
 
     /**
-     * Key {@code ApiTokenProperty.ChangeToken.Success}: {@code
-     * <div>Updated</div>}.
+     * Key {@code ApiTokenProperty.DisplayName}: {@code API Token}.
      * 
      * @return
-     *     {@code <div>Updated</div>}
+     *     {@code API Token}
      */
-    public static Localizable _ApiTokenProperty_ChangeToken_Success() {
-        return new Localizable(holder, "ApiTokenProperty.ChangeToken.Success");
+    public static Localizable _ApiTokenProperty_DisplayName() {
+        return new Localizable(holder, "ApiTokenProperty.DisplayName");
     }
 
 }
