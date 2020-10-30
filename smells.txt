@@ -1,0 +1,3 @@
+Question 1: what code smell this is and what refactoring you can apply to remove the repeated statements?
+
+This is the "Duplicate code" code smell. A good refactoring method to remedy this is "extract method" which will allow developers to simply call the method in place of the repeated code.
