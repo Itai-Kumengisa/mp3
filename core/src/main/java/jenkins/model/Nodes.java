@@ -251,9 +251,13 @@ public class Nodes implements Saveable {
                     }
                 }
                 nodes.putAll(newNodes);
-                jenkins.updateComputerList();
-                jenkins.trimLabels();
+                updateAndTrim();
             }
+
+			private void updateAndTrim() {
+				jenkins.updateComputerList();
+                jenkins.trimLabels();
+			}
         });
     }
 
